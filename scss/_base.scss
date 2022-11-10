@@ -1,0 +1,18 @@
+body {
+    color: #333;
+}
+
+button {
+    background-color: var(--darkest);
+    color: var(--text-inverted);
+    border-radius: var(--space-small);
+    padding: var(--space-small) var(--space-medium);
+    border: 1px solid transparent;
+
+    &:hover, &:focus {
+        background-color: var(--text-inverted);
+        color: var(--text);
+        border-color: var(--darkest);
+        cursor: pointer;
+    }
+}

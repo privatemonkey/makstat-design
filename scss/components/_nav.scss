@@ -1,0 +1,13 @@
+nav.main {
+    gap: var(--space-medium);
+    
+    a {
+        display: inline-block;
+        padding: var(--space-small) var(--space-medium);
+    }
+
+    a.is-active {
+        text-decoration: none;
+        font-weight: 500;
+    }
+}

@@ -1,0 +1,18 @@
+.indicators {
+    .item {
+        padding: var(--space-medium);
+        border: 1px solid var(--border-color);
+        border-radius: var(--space-medium);
+
+        .value {
+            font-size: var(--font-size-xl);
+            font-weight: 600;
+        }
+        .unit {
+            font-size: var(--font-size-regular);
+        }
+        .period {
+            font-size: var(--font-size-regular);
+        }
+    }
+}

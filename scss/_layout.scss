@@ -1,0 +1,30 @@
+/* Generic layout classes */
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.spaced {
+    justify-content: space-between;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+/* Area specific layouts */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: var(--space-medium);
+}
+
+nav.main {
+    padding: 0 var(--space-medium) var(--space-medium);
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" href="/assets/icons/favicon.png" />
+        <link rel="stylesheet" href="/assets/css/style.css" />
+        <!-- Remove templating from production -->
+        <link rel="stylesheet" href="templating.css" />
+        <script src="/templating.js"></script>
+        <!-- End templating-->
+        
+        <title>MakStat templates</title>
+    </head>
+    <body>
+        <nav class="templating"><button onclick="toggleCode()">Toggle code</button></nav>
+        <header>
+            <div data-include="/components/logo.html"></div>
+            <div data-include="/components/search.html"></div>
+        </header>
+        <div data-include="/components/topmenu.html"></div>
+        <main>
+            <div data-include="/components/indicators/start.html"></div>
+            <div data-include="/components/tools/start.html"></div>
+            <div data-include="/components/lists/releases/start.html"></div>
+            <div data-include="/components/lists/news/start.html"></div>
+        </main>
+        <footer class="row spaced wrap">
+            <div data-include="/components/contact.html"></div>
+            <div data-include="/components/lists/links/footer.html"></div>
+        </footer>
+    </body>
+    <script>    
+        includeHTML()
+    </script> 
+</html>

@@ -1,0 +1,40 @@
+nav.templating {
+    position: fixed;
+    bottom: 0.5rem;
+    right: 0.5rem;
+}
+
+.template-load-error {
+    color:hsl(29, 100%, 41%);
+    background-color: hsl(29, 100%, 89%);
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.template-is-empty {
+    color:hsl(133, 100%, 22%);
+    background-color: hsl(132, 100%, 91%);
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.is-hidden {
+    display: none;
+}
+
+.code {
+    font-family: Courier, 'Courier New', monospace;
+    color:hsl(133, 100%, 22%);
+    background-color: hsl(132, 100%, 100%);
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid hsl(130, 8%, 55%);
+}
+
+.code::selection {
+    background-color: hsl(130, 8%, 75%);
+    color:hsl(130, 8%, 15%);
+}
