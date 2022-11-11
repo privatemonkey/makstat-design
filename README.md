@@ -1,8 +1,8 @@
 # Readme
 
-This is a basic frontend dev setup for North Macedonia statistical office. It includes a basic server for development purpose, a SASS and component setup.
+Basic frontend dev setup for North Macedonia statistical office website. 
 
-All template files are served from the root.
+It includes a basic server for development purpose, a SASS and component setup.
 
 ## TODO
 
@@ -27,8 +27,10 @@ npm install -g live-server
 
 ### Initialize project
 
+Run this in the root of the directory
+
 ```bash
-npm init
+npm install
 ```
 
 ### Run it
@@ -49,12 +51,16 @@ npm run build
 
 ### Assets
 
-Files that should be used for production
+Files that should be used for production are stored in this directory. The CSS is also built to the CSS catalogue.
 
 ### Components
 
-HTML snippets
+HTML snippets are stored in this catalogue. If a component has variants it is stored in a library with the component name and template name.
+
+**Example**
+
+```components/list/news/start.html``` contains news showed in the startpage template.
 
 ## Templating
 
-To include a component we use a simple ```data-include="path/filename.html"``` attribute. A script runs on load and adds components to the page.
+To include a component we use a simple ```data-include="path/filename.html"``` attribute on a div tag. A script runs on load, adds components to the page and removes div tags.
