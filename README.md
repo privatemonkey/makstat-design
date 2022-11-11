@@ -1,5 +1,38 @@
 # Readme
 
+## Setup
+
+- Make sure you have Node.js and NPM installed.
+- Install live-server
+
+### Install server
+
+I recommend install (live-server)[https://www.npmjs.com/package/live-server] globally.
+
+```bash
+npm install -g live-server
+```
+
+### Initialize project
+
+```bash
+npm init
+```
+
+### Run it
+
+```bash
+npm run dev
+```
+
+### Build
+
+To build minified css for production
+
+```bash
+npm run build
+```
+
 ## Files
 
 ### Assets

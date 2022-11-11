@@ -6,6 +6,7 @@
 
         <link rel="icon" href="/assets/icons/favicon.png" />
         <link rel="stylesheet" href="/assets/css/style.css" />
+        
         <!-- Remove templating from production -->
         <link rel="stylesheet" href="templating.css" />
         <script src="/templating.js"></script>
@@ -20,13 +21,15 @@
             <div data-include="/components/search.html"></div>
         </header>
         <div data-include="/components/topmenu.html"></div>
-        <main>
+        <main class="smaller-headings">
             <div data-include="/components/indicators/start.html"></div>
             <div data-include="/components/tools/start.html"></div>
-            <div data-include="/components/lists/releases/start.html"></div>
-            <div data-include="/components/lists/news/start.html"></div>
+            <div class="flex row column_if_mobile">
+                <div data-include="/components/lists/releases/start.html"></div>
+                <div data-include="/components/lists/news/start.html"></div>
+            </div>
         </main>
-        <footer class="row spaced wrap">
+        <footer class="row column_if_mobile spaced wrap">
             <div data-include="/components/contact.html"></div>
             <div data-include="/components/lists/links/footer.html"></div>
         </footer>

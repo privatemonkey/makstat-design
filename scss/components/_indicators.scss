@@ -1,18 +1,42 @@
+$font_numbers: 'Public Sans', sans-serif;
+
 .indicators {
+    gap: var(--space-medium);
+    
     .item {
         padding: var(--space-medium);
         border: 1px solid var(--border-color);
         border-radius: var(--space-medium);
 
+        @media screen and (max-width: 920px) {
+            width: 100%;
+        }
+
+        .unit, .period, h3 {
+            font-family: $font_numbers;
+        }
+
         .value {
-            font-size: var(--font-size-xl);
+            font-size: var(--header-h3);
             font-weight: 600;
         }
         .unit {
-            font-size: var(--font-size-regular);
+            font-size: var(--font-size-medium);
         }
         .period {
-            font-size: var(--font-size-regular);
+            font-size: var(--font-size-medium);
         }
+    }
+
+    span {
+        display: block;
+    }
+
+    h3, p, span {
+        margin: 0 0 var(--space-small);
+    }
+
+    h3 {
+        font-size: var(--font-size-large);
     }
 }
