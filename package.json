@@ -4,13 +4,8 @@
   "description": "Design templates and code for MakStat website",
   "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
     "watch:sass": "sass --watch scss/main.scss:public/assets/css/style.css",
     "devserver": "http-server -c-1 --proxy http://localhost:8080?",
-=======
-    "watch:sass": "sass --watch scss/main.scss:assets/css/style.css",
-    "devserver": "live-server",
->>>>>>> b2e38beb91a648c54624041c159b9e75e3237c1c
     "start": "npm-run-all -p devserver watch:sass",
     "dev": "npm-run-all -p devserver watch:sass",
     "compile:sass": "sass scss/main.scss:public/assets/css/style.css",
