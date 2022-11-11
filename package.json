@@ -4,12 +4,12 @@
   "description": "Design templates and code for MakStat website",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "sass --watch scss/main.scss:assets/css/style.css",
+    "watch:sass": "sass --watch scss/main.scss:public/assets/css/style.css",
     "devserver": "http-server -c-1 --proxy http://localhost:8080?",
     "start": "npm-run-all -p devserver watch:sass",
     "dev": "npm-run-all -p devserver watch:sass",
-    "compile:sass": "sass scss/main.scss:assets/css/style.css",
-    "compress:css": "node-sass assets/css/style.css assets/css/style.min.css --output-style compressed",
+    "compile:sass": "sass scss/main.scss:public/assets/css/style.css",
+    "compress:css": "node-sass public/assets/css/style.css /public/assets/css/style.min.css --output-style compressed",
     "build": "npm-run-all -s compile:sass compress:css"
   },
   "keywords": [],
