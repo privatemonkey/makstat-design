@@ -7,8 +7,17 @@ $font_numbers: 'Public Sans', sans-serif;
         padding: var(--space-medium);
         border: 1px solid var(--border-color);
         border-radius: var(--space-medium);
+        width: 20%;
+
+        @media screen and (max-width: 1100px) {
+            width: 27%;
+        }
 
         @media screen and (max-width: 920px) {
+            width: 42%;
+        }
+
+        @media screen and (max-width: 720px) {
             width: 100%;
         }
 

@@ -26,7 +26,7 @@ table th, table td {
 table tr > th:first-of-type {
   padding-left: 0;
 }
-table tr > td:nth-of-type(1n + 1), table tr > th:nth-of-type(1n + 1) {
+table tr > td:nth-of-type(n + 1), table tr > th:nth-of-type(n + 2) {
   border-left: 1px solid var(--table-border-color);
 }
 table td {
@@ -37,9 +37,6 @@ table th, table caption {
 }
 table tbody th, table tbody td {
   border-top: 1px solid var(--table-border-color);
-}
-table caption {
-  font-size: var(--header-h3);
 }
 
 :root {
@@ -61,12 +58,12 @@ table caption {
 }
 :root {
   /* Header sizes */
-  --header-h1: 3.6rem;
-  --header-h2: 3.2rem;
-  --header-h3: 1.3rem;
-  --header-h4: 2.1rem;
-  --header-h5: 1.75rem;
-  --header-h6: 1.5rem;
+  --header-h1: 3.2rem;
+  --header-h2: 2.6rem;
+  --header-h3: 2.1rem;
+  --header-h4: 1.75rem;
+  --header-h5: 1.5rem;
+  --header-h6: 1.25rem;
   /* Text sizes */
   --font-size-xlarge: 2rem;
   --font-size-large: 1.5rem;
@@ -84,11 +81,6 @@ body, input, button, textarea {
 .preamble {
   font-size: var(--font-size-large);
   font-weight: 500;
-  max-width: 70vw;
-}
-
-article .content {
-  max-width: 62vw;
 }
 
 a {
@@ -103,6 +95,7 @@ a.is-active, a:hover, a:focus {
 h1, h2, h3, h4, h5 {
   font-weight: 600;
   line-height: 125%;
+  margin-top: 0;
 }
 
 h1 {
@@ -129,6 +122,18 @@ h4 {
 }
 .smaller-headings h4 {
   font-size: var(--header-h6);
+}
+
+caption {
+  font-size: var(--header-h4);
+  font-weight: 600;
+}
+
+caption .subcaption {
+  display: inline-block;
+  width: 100%;
+  font-size: var(--header-h6);
+  font-weight: 500;
 }
 
 :root {
@@ -185,6 +190,11 @@ body {
 header, main, nav.main, article {
   max-width: 1280px;
   margin: 0 auto;
+  padding: var(--space-large);
+}
+
+main article {
+  padding: 0;
 }
 
 footer {
@@ -207,10 +217,30 @@ header {
 
 article header {
   flex-direction: column;
+  padding: 0;
 }
 
 nav.main {
   padding: 0 var(--space-medium) var(--space-medium);
+}
+
+article .preamble {
+  max-width: 70vw;
+}
+article .content {
+  max-width: 62vw;
+}
+
+@media screen and (max-width: 720px) {
+  article .preamble {
+    max-width: calc(100vw - var(--space-large) - var(--space-large));
+  }
+  article .content {
+    max-width: calc(100vw - var(--space-large) - var(--space-large));
+  }
+}
+article h3 {
+  font-size: var(--header-h5);
 }
 
 nav.main {
@@ -232,8 +262,19 @@ nav.main a.is-active {
   padding: var(--space-medium);
   border: 1px solid var(--border-color);
   border-radius: var(--space-medium);
+  width: 20%;
+}
+@media screen and (max-width: 1100px) {
+  .indicators .item {
+    width: 27%;
+  }
 }
 @media screen and (max-width: 920px) {
+  .indicators .item {
+    width: 42%;
+  }
+}
+@media screen and (max-width: 720px) {
   .indicators .item {
     width: 100%;
   }

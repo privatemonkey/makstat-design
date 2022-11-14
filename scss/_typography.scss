@@ -10,12 +10,12 @@
 
 :root {
     /* Header sizes */
-    --header-h1: 3.6rem;
-    --header-h2: 3.2rem;
-    --header-h3: 1.3rem;
-    --header-h4: 2.1rem;
-    --header-h5: 1.75rem; 
-    --header-h6: 1.5rem; 
+    --header-h1: 3.2rem;
+    --header-h2: 2.6rem;
+    --header-h3: 2.1rem;
+    --header-h4: 1.75rem;
+    --header-h5: 1.5rem; 
+    --header-h6: 1.25rem; 
 
     /* Text sizes */
     --font-size-xlarge: 2rem;
@@ -28,10 +28,10 @@
 $font_sansserif: 'Montserrat', sans-serif;
 $font_numbers: 'Public Sans', sans-serif;
 
-$light: 300;
+$light: 200;
 $normal: 400;
 $semibold: 500;
-$bold: 700;
+$bold: 600;
 
 body, input, button, textarea {
     font-family: $font_sansserif;
@@ -42,13 +42,6 @@ body, input, button, textarea {
 .preamble {
     font-size: var(--font-size-large);
     font-weight: $semibold;
-    max-width: 70vw;
-}
-
-article {
-    .content {
-        max-width: 62vw;
-    }
 }
 
 a {
@@ -64,6 +57,7 @@ a {
 @mixin heading {
     font-weight: 600;
     line-height: 125%;
+    margin-top: 0;
 }
 
 h1, h2, h3, h4, h5 {
@@ -98,4 +92,15 @@ h4 {
     h4 {
         font-size: var(--header-h6);
     } 
+}
+
+caption {
+    font-size: var(--header-h4);
+    font-weight: $bold;
+}
+caption .subcaption {
+    display: inline-block;
+    width: 100%;
+    font-size: var(--header-h6);
+    font-weight: $semibold;
 }

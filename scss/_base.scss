@@ -29,7 +29,7 @@ table {
         padding-left: 0;
     }
 
-    tr > td:nth-of-type(1n + 1), tr > th:nth-of-type(1n + 1) {
+    tr > td:nth-of-type(n + 1), tr > th:nth-of-type(n + 2) {
         border-left: 1px solid var(--table-border-color);
     }
 
@@ -43,8 +43,5 @@ table {
 
     tbody th, tbody td {
         border-top: 1px solid var(--table-border-color);
-    }
-    caption {
-        font-size: var(--header-h3);
     }
 }

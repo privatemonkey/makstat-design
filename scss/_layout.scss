@@ -50,6 +50,11 @@ body {
 header, main, nav.main, article {
     max-width: 1280px;
     margin: 0 auto;
+    padding: var(--space-large)
+}
+
+main article {
+    padding: 0;
 }
 
 footer {
@@ -71,8 +76,29 @@ header {
 
 article header {
     flex-direction: column;
+    padding: 0;
 }
 
 nav.main {
     padding: 0 var(--space-medium) var(--space-medium);
+}
+
+article {
+    .preamble {
+        max-width: 70vw;
+    }
+    .content {
+        max-width: 62vw;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    article {
+            .preamble {
+                max-width: calc(100vw - var(--space-large) - var(--space-large));
+            }
+            .content {
+                max-width: calc(100vw - var(--space-large) - var(--space-large));;
+            }
+    }
 }
