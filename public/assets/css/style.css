@@ -1,10 +1,3 @@
-:root {
-  --space-tiny: 0.25rem;
-  --space-xs: 0.5rem;
-  --space-small: 0.75rem;
-  --space-medium: 1rem;
-}
-
 body {
   color: #333;
 }
@@ -35,10 +28,19 @@ button:hover, button:focus {
   font-family: "Montserrat";
   src: url("/assets/fonts/Montserrat-VariableFont_wght.ttf");
 }
+@font-face {
+  font-family: "Public Sans";
+  src: url("/assets/fonts/PublicSans-VariableFont_wght.ttf");
+}
 :root {
+  /* Header sizes */
   --header-h1: 3.6rem;
   --header-h2: 3.2rem;
   --header-h3: 2.8rem;
+  --header-h4: 2.1rem;
+  --header-h5: 1.75rem;
+  --header-h6: 1.5rem;
+  /* Text sizes */
   --font-size-xlarge: 2rem;
   --font-size-large: 1.5rem;
   --font-size-medium: 1rem;
@@ -54,6 +56,7 @@ body, input, button, textarea {
 
 a {
   color: var(--link);
+  display: inline-block;
 }
 a.is-active, a:hover, a:focus {
   color: var(--text-inverted);
@@ -66,19 +69,36 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-  font-size: 3.6rem;
+  font-size: var(--header-h1);
 }
 
 h2 {
-  font-size: 3.2rem;
+  font-size: var(--header-h2);
 }
 
 h3 {
-  font-size: 2.6rem;
+  font-size: var(--header-h3);
 }
 
 h4 {
-  font-size: 2.1rem;
+  font-size: var(--header-h4);
+}
+
+.smaller-headings h2 {
+  font-size: var(--header-h4);
+}
+.smaller-headings h3 {
+  font-size: var(--header-h5);
+}
+.smaller-headings h4 {
+  font-size: var(--header-h6);
+}
+
+:root {
+  --space-tiny: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-small: 0.75rem;
+  --space-medium: 1rem;
 }
 
 /* Generic layout classes */
@@ -92,15 +112,42 @@ h4 {
   flex-direction: row;
 }
 
+@media screen and (max-width: 920px) {
+  .column_if_mobile {
+    flex-direction: column;
+    max-width: 100vw;
+  }
+}
+
 .spaced {
   justify-content: space-between;
+  gap: var(--space-medium);
 }
 
 .wrap {
   flex-wrap: wrap;
 }
 
+.list {
+  max-width: 50%;
+}
+@media screen and (max-width: 920px) {
+  .list {
+    max-width: 100vw;
+  }
+}
+
 /* Area specific layouts */
+body {
+  padding: 0;
+  margin: 0;
+}
+
+header, main, footer, nav.main {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
 header {
   display: flex;
   flex-direction: row;
@@ -124,20 +171,40 @@ nav.main a.is-active {
   font-weight: 500;
 }
 
+.indicators {
+  gap: var(--space-medium);
+}
 .indicators .item {
   padding: var(--space-medium);
   border: 1px solid var(--border-color);
   border-radius: var(--space-medium);
 }
+@media screen and (max-width: 920px) {
+  .indicators .item {
+    width: 100%;
+  }
+}
+.indicators .item .unit, .indicators .item .period, .indicators .item h3 {
+  font-family: "Public Sans", sans-serif;
+}
 .indicators .item .value {
-  font-size: var(--font-size-xl);
+  font-size: var(--header-h3);
   font-weight: 600;
 }
 .indicators .item .unit {
-  font-size: var(--font-size-regular);
+  font-size: var(--font-size-medium);
 }
 .indicators .item .period {
-  font-size: var(--font-size-regular);
+  font-size: var(--font-size-medium);
+}
+.indicators span {
+  display: block;
+}
+.indicators h3, .indicators p, .indicators span {
+  margin: 0 0 var(--space-small);
+}
+.indicators h3 {
+  font-size: var(--font-size-large);
 }
 
 .search {

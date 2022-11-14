@@ -4,7 +4,7 @@ $font_numbers: 'Public Sans', sans-serif;
     gap: var(--space-medium);
     
     .item {
-        padding: var(--space-medium);
+        padding: var(--space-small) var(--space-medium) var(--space-small);
         border: 1px solid var(--border-color);
         border-radius: var(--space-medium);
 
