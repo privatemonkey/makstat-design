@@ -3,25 +3,25 @@
     src: url("/assets/fonts/Montserrat-VariableFont_wght.ttf");
   }
 
-main, header {
+.template main, .template header {
     max-width: 920px;
     margin: 0 auto;
 }
 
-body {
+body.template {
    font-family: 'Montserrat', sans-serif; 
 }
 
-td, th {
+.template td, .template th {
     padding: 0.5rem;
     text-align: left;
 }
 
-table {
+.template table {
     margin-bottom: 2rem;
 }
 
-caption {
+.template caption {
     font-weight: 700;
     font-size: 1.75rem;
     text-align: left;
