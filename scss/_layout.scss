@@ -1,8 +1,10 @@
 :root {
-    --space-tiny: 0.25rem;
-    --space-xs: 0.5rem;
-    --space-small: 0.75rem;
+    --space-xlarge: 3rem;
+    --space-large: 1.5rem;
     --space-medium: 1rem;
+    --space-small: 0.75rem;
+    --space-xs: 0.5rem;
+    --space-tiny: 0.25rem;
 }
 
 /* Generic layout classes */
@@ -45,7 +47,17 @@ body {
     margin: 0;
 }
 
-header, main, footer, nav.main {
+header, main, nav.main, article {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+footer {
+    width: 100vw;
+    color: var(--text-inverted);
+    background-color: var(--darkest);
+}
+footer > * {
     max-width: 1280px;
     margin: 0 auto;
 }
@@ -55,6 +67,10 @@ header {
     flex-direction: row;
     justify-content: space-between;
     padding: var(--space-medium);
+}
+
+article header {
+    flex-direction: column;
 }
 
 nav.main {

@@ -12,7 +12,7 @@
     /* Header sizes */
     --header-h1: 3.6rem;
     --header-h2: 3.2rem;
-    --header-h3: 2.8rem;
+    --header-h3: 1.3rem;
     --header-h4: 2.1rem;
     --header-h5: 1.75rem; 
     --header-h6: 1.5rem; 
@@ -37,6 +37,18 @@ body, input, button, textarea {
     font-family: $font_sansserif;
     font-size: var(--font-size-medium);
     font-weight: normal;
+}
+
+.preamble {
+    font-size: var(--font-size-large);
+    font-weight: $semibold;
+    max-width: 70vw;
+}
+
+article {
+    .content {
+        max-width: 62vw;
+    }
 }
 
 a {
