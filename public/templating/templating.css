@@ -1,3 +1,33 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url("/assets/fonts/Montserrat-VariableFont_wght.ttf");
+  }
+
+main, header {
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+body {
+   font-family: 'Montserrat', sans-serif; 
+}
+
+td, th {
+    padding: 0.5rem;
+    text-align: left;
+}
+
+table {
+    margin-bottom: 2rem;
+}
+
+caption {
+    font-weight: 700;
+    font-size: 1.75rem;
+    text-align: left;
+    padding: 0.5rem 0.25rem;
+}
+
 nav.templating {
     position: fixed;
     bottom: 0.5rem;
