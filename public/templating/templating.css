@@ -17,8 +17,20 @@ body.template {
     text-align: left;
 }
 
+.template td:first-of-type {
+    width: 20%;
+}
+
+.template td:nth-of-type(2) {
+    width: 70%;
+}
+.template td:nth-of-type(3) {
+    width: 10%;
+}
+
 .template table {
     margin-bottom: 2rem;
+    width: 100%;
 }
 
 .template caption {
