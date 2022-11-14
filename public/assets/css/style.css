@@ -58,12 +58,21 @@ table tbody th, table tbody td {
 }
 :root {
   /* Header sizes */
+<<<<<<< HEAD
   --header-h1: 3.2rem;
   --header-h2: 2.6rem;
   --header-h3: 2.1rem;
   --header-h4: 1.75rem;
   --header-h5: 1.5rem;
   --header-h6: 1.25rem;
+=======
+  --header-h1: 3.6rem;
+  --header-h2: 3.2rem;
+  --header-h3: 2.8rem;
+  --header-h4: 2.1rem;
+  --header-h5: 1.75rem;
+  --header-h6: 1.5rem;
+>>>>>>> 968366294d9ba904587fbaaee8e130c0b25026ca
   /* Text sizes */
   --font-size-xlarge: 2rem;
   --font-size-large: 1.5rem;
@@ -124,6 +133,7 @@ h4 {
   font-size: var(--header-h6);
 }
 
+<<<<<<< HEAD
 caption {
   font-size: var(--header-h4);
   font-weight: 600;
@@ -143,6 +153,13 @@ caption .subcaption {
   --space-small: 0.75rem;
   --space-xs: 0.5rem;
   --space-tiny: 0.25rem;
+=======
+:root {
+  --space-tiny: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-small: 0.75rem;
+  --space-medium: 1rem;
+>>>>>>> 968366294d9ba904587fbaaee8e130c0b25026ca
 }
 
 /* Generic layout classes */
@@ -187,6 +204,7 @@ body {
   margin: 0;
 }
 
+<<<<<<< HEAD
 header, main, nav.main, article {
   max-width: 1280px;
   margin: 0 auto;
@@ -204,6 +222,9 @@ footer {
 }
 
 footer > * {
+=======
+header, main, footer, nav.main {
+>>>>>>> 968366294d9ba904587fbaaee8e130c0b25026ca
   max-width: 1280px;
   margin: 0 auto;
 }
@@ -275,6 +296,14 @@ nav.main a.is-active {
   }
 }
 @media screen and (max-width: 720px) {
+  .indicators .item {
+    width: 100%;
+  }
+}
+.indicators .item .unit, .indicators .item .period, .indicators .item h3 {
+  font-family: "Public Sans", sans-serif;
+}
+@media screen and (max-width: 920px) {
   .indicators .item {
     width: 100%;
   }
