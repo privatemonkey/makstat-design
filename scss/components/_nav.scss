@@ -11,3 +11,40 @@ nav.main {
         font-weight: 500;
     }
 }
+
+nav.tools {
+    a.icon {
+        display: inline-block;
+        padding: var(--space-small) var(--space-medium);
+        border-radius: var(--border-radius);
+        border: 1px solid var(--border-color);
+        color: var(--text);
+        font-weight: var(--semibold);
+        text-decoration: none; 
+        background-color: var(--text-inverted);
+        box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        padding: 1.25rem 1.5rem 1.25rem 3.5rem;
+        background-position: 1.25rem 1rem;
+        background-repeat: no-repeat;
+        background-size: 1.5rem 1.5rem;
+
+        &:hover, &:focus {
+            color: var(--text-inverted);
+            border-color: var(--text);
+            border-width: 0;
+            background-color: var(--darkest);
+            box-shadow: none;
+            margin: 1px 0;
+        }
+    }
+
+    .icon-pie {
+        background-image: url('/assets/icons/pie.svg');     
+    }
+    .icon-checklist {
+        background-image: url('/assets/icons/checklist.svg');
+    }
+    .icon-bars {
+        background-image: url('/assets/icons/bars.svg');
+    }
+}

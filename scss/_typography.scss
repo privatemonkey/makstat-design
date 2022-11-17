@@ -8,6 +8,9 @@
     src: url('/assets/fonts/PublicSans-VariableFont_wght.ttf')
 }
 
+$font_sansserif: 'Montserrat', sans-serif;
+$font_numbers: 'Public Sans', sans-serif;
+
 :root {
     /* Header sizes */
     --header-h1: 3.2rem;
@@ -16,22 +19,20 @@
     --header-h4: 1.75rem;
     --header-h5: 1.5rem; 
     --header-h6: 1.25rem; 
+    --header-h7: 1rem; 
 
     /* Text sizes */
-    --font-size-xlarge: 2rem;
-    --font-size-large: 1.5rem;
+    --font-size-xlarge: 1.5rem;
+    --font-size-large: 1.2rem;
     --font-size-medium: 1rem;
     --font-size-small: 0.9rem;
     --font-size-xsmall: 0.75rem;
+
+    --semibold: 500;
+    --bold: 600;
+    --normal: 400;
+    --light: 300;
 }
-
-$font_sansserif: 'Montserrat', sans-serif;
-$font_numbers: 'Public Sans', sans-serif;
-
-$light: 200;
-$normal: 400;
-$semibold: 500;
-$bold: 600;
 
 body, input, button, textarea {
     font-family: $font_sansserif;
@@ -40,24 +41,54 @@ body, input, button, textarea {
 }
 
 .preamble {
-    font-size: var(--font-size-large);
-    font-weight: $semibold;
+    font-size: var(--font-size-xlarge);
+    font-weight: var(--semibold);
 }
 
 a {
     color: var(--link);
     display: inline-block;
+}
 
+a, a h3 {
     &.is-active, &:hover, &:focus {
         color: var(--text-inverted);
         background-color: var(--darkest);
+        text-decoration: none;
     }
+}
+
+a.readmore {
+    color: var(--link);
+    display: inline-block;
+    margin-left: -0.5rem;
+    padding: var(--space-small) var(--space-medium) var(--space-small);
+
+    &:hover, &:focus {
+        color: var(--text-inverted);
+        background-color: var(--text);
+    }
+}
+
+::selection {
+    background-color: var(--selection);
+    color: var(--text);
+    text-decoration: none;
+}
+
+@mixin text {
+    line-height: 115%;
+}
+
+p {
+    @include text;
 }
 
 @mixin heading {
     font-weight: 600;
-    line-height: 125%;
-    margin-top: 0;
+    line-height: 150%;
+    margin-bottom: var(--space-medium);
+    margin-top: var(--space-xlarge);
 }
 
 h1, h2, h3, h4, h5 {
@@ -79,28 +110,35 @@ h3 {
 h4 {
     font-size: var(--header-h4);
 }
+h5 {
+    font-size: var(--header-h5);
+}
 
 .smaller-headings {
     h2 {
-        font-size: var(--header-h4);
-    }
-    
-    h3 {
         font-size: var(--header-h5);
     }
     
-    h4 {
+    h3 {
         font-size: var(--header-h6);
+    }
+    
+    h4 {
+        font-size: var(--header-h7);
     } 
 }
 
 caption {
     font-size: var(--header-h4);
-    font-weight: $bold;
+    font-weight: var(--bold);
 }
 caption .subcaption {
     display: inline-block;
     width: 100%;
     font-size: var(--header-h6);
-    font-weight: $semibold;
+    font-weight: var(--semibold);
+}
+
+dd, dt, address, time {
+    font-style: normal;
 }

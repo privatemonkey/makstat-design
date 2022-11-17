@@ -1,10 +1,32 @@
-async function getFile(el, file) {
-  await fetch(file, {
+let makstatHeader = {
+    method: "GET",
+    headers: {"Content-type": "text/html", "Access-Control-Allow-Origin":"*"},
     cache: "no-store"
-  })
+  }
+
+let isExternal = false
+
+/*
+* @function
+* Get content from template files
+*/
+async function getFile(el, file) {
+  let header = {
+    cache: "no-store"
+  }
+
+  if (file.indexOf('https') >-1) {
+    header = makstatHeader
+    isExternal = true
+    console.log('Trying to fetch external content from ' + file)
+  } else {
+    isExternal = false
+  }
+
+  await fetch(file, header)
   .then((response) => {
     if (response.status == 200) {
-      return response.text()
+        return response.text()
     } else {
       throw new Error(response.status);
     }
@@ -32,7 +54,6 @@ async function getFile(el, file) {
     console.log(err)
   })
 }
-
 
 async function includeHTML() {
     var includes, i, el, file;

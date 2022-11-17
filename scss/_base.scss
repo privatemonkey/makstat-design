@@ -1,5 +1,6 @@
 body {
     color: #333;
+    background-color: #FFFCF9;
 }
 
 button {
@@ -14,34 +15,5 @@ button {
         color: var(--text);
         border-color: var(--darkest);
         cursor: pointer;
-    }
-}
-
-table {
-    margin-bottom: var(--space-xlarge);
-
-    th, td {
-        padding: var(--space-small);
-        margin: 0;
-    }
-
-    tr > th:first-of-type {
-        padding-left: 0;
-    }
-
-    tr > td:nth-of-type(n + 1), tr > th:nth-of-type(n + 2) {
-        border-left: 1px solid var(--table-border-color);
-    }
-
-    td {
-        text-align: right;
-    }
-
-    th, caption {
-        text-align: left;
-    }
-
-    tbody th, tbody td {
-        border-top: 1px solid var(--table-border-color);
     }
 }
