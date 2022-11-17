@@ -455,6 +455,7 @@ table {
 table th, table td {
   padding: var(--space-small);
   margin: 0;
+  border-width: 0;
 }
 table tr > th:first-of-type {
   padding-left: 0;
