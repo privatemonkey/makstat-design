@@ -71,16 +71,14 @@ a, a h3 {
 }
 
 ol li, ul li {
-    padding: var(--space-tiny);
-}
-
-ul li {
-    margin: -0.5rem;
+    padding: 0;
+    margin: 0;
 }
 
 ol, ul {
     padding: 0 var(--space-large);
     margin-bottom: var(--space-xlarge);
+    --space-between: 0;
 }
 
 a.readmore {

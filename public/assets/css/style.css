@@ -125,16 +125,14 @@ a.is-active, a:hover, a:focus, a h3.is-active, a h3:hover, a h3:focus {
 }
 
 ol li, ul li {
-  padding: var(--space-tiny);
-}
-
-ul li {
-  margin: -0.5rem;
+  padding: 0;
+  margin: 0;
 }
 
 ol, ul {
   padding: 0 var(--space-large);
   margin-bottom: var(--space-xlarge);
+  --space-between: 0;
 }
 
 a.readmore {
@@ -359,7 +357,7 @@ body {
 header, main, nav.main, nav.breadcrumb, article {
   max-width: 1280px;
   margin: 0 auto;
-  padding: var(--space-large);
+  padding: 0 var(--space-large);
 }
 
 main article {
@@ -483,19 +481,29 @@ footer {
   padding: var(--space-small);
 }
 
-.breadcrumb ol {
+nav.breadcrumb {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+nav.breadcrumb ol {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   list-style: none;
   padding: 0;
 }
-.breadcrumb ol li::after {
+nav.breadcrumb ol li::after {
   content: ">";
   margin-left: var(--space-tiny);
 }
-.breadcrumb ol li:last-of-type::after {
+nav.breadcrumb ol li:last-of-type::after {
   content: "";
+}
+nav.breadcrumb ol a.is-active {
+  color: var(--text);
+  font-weight: var(--semibold);
+  background-color: transparent;
+  text-decoration: none;
 }
 
 nav.main {
@@ -643,6 +651,9 @@ table th, table caption {
 }
 table tbody th, table tbody td {
   border-top: 1px solid var(--table-border-color);
+}
+table caption {
+  width: 100%;
 }
 
 footer {
