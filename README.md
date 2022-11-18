@@ -6,9 +6,10 @@ It includes a basic server for development purpose, a SASS and component setup.
 
 ## TODO
 
-- [ ] Finish start page template (Desktop)
+- [x] Finish start page template (Desktop)
 - [ ] Add theme template
-- [ ] Add template for regular page
+- [x] Add template for statistics start page
+- [x] Add template for regular page
 - [ ] Create responsive menus (Mobile)
 - [ ] Make templates fully responsive
 
@@ -53,9 +54,9 @@ npm run build
 
 Files that should be used for production are stored in this directory. The CSS is also built to the CSS catalogue.
 
-### Components
+### Components and elements
 
-HTML snippets are stored in this catalogue. If a component has variants it is stored in a library with the component name and template name.
+HTML snippets are stored in this catalogue. If a component has variants it is stored in a library with the component name and template name. In the SCSS library you'll find a corresponding ```_component.scss``` file.
 
 **Example**
 
