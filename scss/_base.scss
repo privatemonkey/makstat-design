@@ -3,18 +3,47 @@ body {
     background-color: #FFFCF9;
 }
 
-button {
+button, input[type=button], input[type=submit] {
     background-color: var(--darkest);
     color: var(--text-inverted);
     border-radius: var(--space-small);
     padding: var(--space-small) var(--space-medium);
     border: 1px solid transparent;
 
+    &.primary {
+        background-color: var(--primary);
+    }
+    &.secondary {
+        background-color: var(--white);
+        border-color: var(--primary);
+        color: var(--primary);
+    }
+    &.tertiar {
+        background-color: var(--tertiar);
+        border-color: var(--tertiar);
+        color: var(--white);
+    }
+}
+
+button, button.primary, button.secondary, button.tertiar, input[type=button], input[type=submit] {
+    &:disabled {
+        background-color: var(--border-color);
+        color: var(--tertiar);
+        border-color: var(--tertiar);
+
+        &:hover, &:focus {
+            cursor: not-allowed;
+            background-color: var(--border-color);
+            color: var(--tertiar);
+            border-color: var(--tertiar);
+        }
+    }
+
     &:hover, &:focus {
-        background-color: var(--text-inverted);
-        color: var(--text);
-        border-color: var(--darkest);
-        outline: 1px solid var(--darkest);
+        background-color: var(--black);
+        color: var(--white);
+        border-color: var(--black);
+        outline: 1px solid var(--black);
         text-decoration: underline;
         cursor: pointer;
     }

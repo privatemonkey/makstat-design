@@ -1,25 +1,56 @@
+@charset "UTF-8";
 body {
   color: #333;
   background-color: #FFFCF9;
 }
 
-button {
+button, input[type=button], input[type=submit] {
   background-color: var(--darkest);
   color: var(--text-inverted);
   border-radius: var(--space-small);
   padding: var(--space-small) var(--space-medium);
   border: 1px solid transparent;
 }
-button:hover, button:focus {
-  background-color: var(--text-inverted);
-  color: var(--text);
-  border-color: var(--darkest);
-  outline: 1px solid var(--darkest);
+button.primary, input[type=button].primary, input[type=submit].primary {
+  background-color: var(--primary);
+}
+button.secondary, input[type=button].secondary, input[type=submit].secondary {
+  background-color: var(--white);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+button.tertiar, input[type=button].tertiar, input[type=submit].tertiar {
+  background-color: var(--tertiar);
+  border-color: var(--tertiar);
+  color: var(--white);
+}
+
+button:disabled, button.primary:disabled, button.secondary:disabled, button.tertiar:disabled, input[type=button]:disabled, input[type=submit]:disabled {
+  background-color: var(--border-color);
+  color: var(--tertiar);
+  border-color: var(--tertiar);
+}
+button:disabled:hover, button:disabled:focus, button.primary:disabled:hover, button.primary:disabled:focus, button.secondary:disabled:hover, button.secondary:disabled:focus, button.tertiar:disabled:hover, button.tertiar:disabled:focus, input[type=button]:disabled:hover, input[type=button]:disabled:focus, input[type=submit]:disabled:hover, input[type=submit]:disabled:focus {
+  cursor: not-allowed;
+  background-color: var(--border-color);
+  color: var(--tertiar);
+  border-color: var(--tertiar);
+}
+button:hover, button:focus, button.primary:hover, button.primary:focus, button.secondary:hover, button.secondary:focus, button.tertiar:hover, button.tertiar:focus, input[type=button]:hover, input[type=button]:focus, input[type=submit]:hover, input[type=submit]:focus {
+  background-color: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+  outline: 1px solid var(--black);
   text-decoration: underline;
   cursor: pointer;
 }
 
 :root {
+  --primary: hsl(194, 64%, 13%);
+  --secondary: hsl(29, 100%, 41%);
+  --tertiar: hsl(29, 10%, 27%);
+  --white: hsl(0, 100%, 100%);
+  --black: hsl(0,100%,0%);
   --link: hsl(29, 100%, 41%);
   --text: hsl(0,100%,5%);
   --text-inverted: hsl(0, 100%, 100%);
@@ -27,6 +58,7 @@ button:hover, button:focus {
   --border-color: hsl(29, 30%, 71%);
   --table-border-color: hsl(29, 30%, 71%);
   --selection: hsl(45, 100%, 80%);
+  --panel-background: hsl(0, 100%, 100%);
 }
 
 @font-face {
@@ -69,6 +101,13 @@ body, input, button, textarea {
   font-weight: var(--semibold);
 }
 
+.links-inverted a {
+  color: var(--text-inverted);
+}
+.links-inverted a:hover, .links-inverted a:hover {
+  background-color: var(--text);
+}
+
 a {
   color: var(--link);
   display: inline-block;
@@ -107,7 +146,7 @@ a.readmore {
 }
 a.readmore:hover, a.readmore:focus {
   color: var(--text-inverted);
-  background-color: var(--text);
+  background-color: var(--darkest);
 }
 
 ::selection {
@@ -200,6 +239,7 @@ input:focus {
   --space-xs: 0.5rem;
   --space-tiny: 0.25rem;
   --space-top: 2rem;
+  --space-between: 1rem;
   --border-radius: 0.25rem;
 }
 
@@ -212,7 +252,7 @@ input:focus {
 .row {
   display: flex;
   flex-direction: row;
-  gap: var(--space-large);
+  gap: var(--space-between);
 }
 
 @media screen and (max-width: 920px) {
@@ -223,22 +263,91 @@ input:focus {
   }
 }
 
+.columns-4 {
+  display: grid;
+  gap: var(--space-between);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.columns-3 {
+  display: grid;
+  gap: var(--space-between);
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.columns-2 {
+  display: grid;
+  gap: var(--space-between);
+  grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 1140px) {
+  .columns-4, .columns-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .columns-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 920px) {
+  .columns-4, .columns-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .columns-2 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 480px) {
+  .columns-4, .columns-3, .columns-2 {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .spaced {
   justify-content: space-between;
   gap: var(--space-medium);
+}
+
+.spaced-small {
+  justify-content: space-between;
+  gap: var(--space-small);
+}
+
+.max-1280 {
+  max-width: 1280px;
+}
+
+.margin-auto {
+  margin: 0 auto;
+}
+
+.padded {
+  padding: var(--space-small) var(--space-medium);
+}
+
+.padded-large {
+  padding: var(--space-xlarge) var(--space-large);
+}
+
+.padded-small {
+  padding: var(--space-tiny) var(--space-small);
 }
 
 .wrap {
   flex-wrap: wrap;
 }
 
-.list {
-  max-width: 50%;
-}
 @media screen and (max-width: 920px) {
   .list {
     max-width: 100vw;
   }
+}
+
+.panel {
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background-color: var(--panel-background);
 }
 
 /* Area specific layouts */
@@ -366,17 +475,12 @@ footer {
 }
 
 .link-list ul {
-  list-style: none;
-  padding: 0;
-  margin-left: -0.5rem;
+  list-style: "■";
+  padding: var(--space-medium);
 }
 .link-list li a {
   display: inline-block;
   padding: var(--space-small);
-  color: var(--text-inverted);
-}
-.link-list li a:hover, .link-list li a:focus {
-  background-color: #000;
 }
 
 .breadcrumb ol {
@@ -441,31 +545,6 @@ nav.tools .icon-calendar {
   background-image: url("/assets/icons/calendar.svg");
 }
 
-.indicators {
-  gap: var(--space-medium);
-}
-.indicators .item {
-  padding: var(--space-small) var(--space-medium) var(--space-small);
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius);
-  width: 20%;
-  background-color: var(--text-inverted);
-}
-@media screen and (max-width: 1100px) {
-  .indicators .item {
-    width: 27%;
-  }
-}
-@media screen and (max-width: 920px) {
-  .indicators .item {
-    width: 42%;
-  }
-}
-@media screen and (max-width: 720px) {
-  .indicators .item {
-    width: 100%;
-  }
-}
 .indicators .item .unit, .indicators .item .period, .indicators .item h3 {
   font-family: "Public Sans", sans-serif;
 }

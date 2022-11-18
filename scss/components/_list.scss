@@ -57,17 +57,11 @@
 
 .link-list {
     ul {
-        list-style: none;
-        padding: 0;
-        margin-left: -0.5rem;
+        list-style: '■';
+        padding: var(--space-medium);
     }
     li a {
         display: inline-block;
         padding: var(--space-small);
-        color: var(--text-inverted);
-
-        &:hover, &:focus {
-            background-color: #000;
-        }
     }
 }

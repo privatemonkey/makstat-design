@@ -45,6 +45,13 @@ body, input, button, textarea {
     font-weight: var(--semibold);
 }
 
+.links-inverted a {
+    color: var(--text-inverted);
+
+    &:hover, &:hover {
+        background-color: var(--text);
+    }
+}
 a {
     color: var(--link);
     display: inline-block;
@@ -85,7 +92,7 @@ a.readmore {
  
     &:hover, &:focus {
         color: var(--text-inverted);
-        background-color: var(--text);
+        background-color: var(--darkest);
     }
 }
 

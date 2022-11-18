@@ -11,7 +11,7 @@
         <script src="/_system/templating.js"></script>
         <!-- End templating-->
         
-        <title>Skeleton, MakStat templates</title>
+        <title>Statistics, MakStat templates</title>
     </head>
     <body>
         <nav class="templating"><button onclick="toggleCode()">Toggle code</button></nav>
@@ -21,13 +21,12 @@
         </header>
         <div data-include="/components/navigation/topmenu/statistics.html"></div>
         <main>
-            <p>content goes here</p>
+            <div data-include="/components/lists/links/themes.html"></div>
             <div data-include="/components/tools/statistics.html"></div>
+            <div data-include="/components/lists/links/topics.html"></div>
         </main>
-        <footer class="row spaced wrap column_if_mobile">
-            <div data-include="/components/contact/footer.html"></div>
-            <div data-include="/components/lists/links/footer.html"></div>
-        </footer>
+ 
+        <div data-include="/elements/footer.html"></div>
     </body>
     <script>    
         includeHTML()

@@ -1,4 +1,9 @@
 :root {
+    --primary: hsl(194, 64%, 13%);
+    --secondary: hsl(29, 100%, 41%);
+    --tertiar: hsl(29, 10%, 27%);
+    --white: hsl(0, 100%, 100%);
+    --black: hsl(0,100%,0%);
     --link: hsl(29, 100%, 41%);
     --text: hsl(0,100%,5%);
     --text-inverted: hsl(0, 100%, 100%);
@@ -6,4 +11,5 @@
     --border-color: hsl(29, 30%, 71%);
     --table-border-color: hsl(29, 30%, 71%);
     --selection: hsl(45, 100%, 80%);
+    --panel-background: hsl(0, 100%, 100%);
 }
