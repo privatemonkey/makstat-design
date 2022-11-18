@@ -14,6 +14,8 @@ button:hover, button:focus {
   background-color: var(--text-inverted);
   color: var(--text);
   border-color: var(--darkest);
+  outline: 1px solid var(--darkest);
+  text-decoration: underline;
   cursor: pointer;
 }
 
@@ -72,17 +74,36 @@ a {
   display: inline-block;
 }
 
+a.is-active {
+  text-decoration: none;
+  font-weight: 500;
+}
+
 a.is-active, a:hover, a:focus, a h3.is-active, a h3:hover, a h3:focus {
   color: var(--text-inverted);
   background-color: var(--darkest);
   text-decoration: none;
 }
 
+ol li, ul li {
+  padding: var(--space-tiny);
+}
+
+ul li {
+  margin: -0.5rem;
+}
+
+ol, ul {
+  padding: 0 var(--space-large);
+  margin-bottom: var(--space-xlarge);
+}
+
 a.readmore {
+  margin-top: var(--space-tiny);
   color: var(--link);
   display: inline-block;
-  margin-left: -0.5rem;
-  padding: var(--space-small) var(--space-medium) var(--space-small);
+  padding: var(--space-small) var(--space-tiny);
+  font-size: var(--font-size-small);
 }
 a.readmore:hover, a.readmore:focus {
   color: var(--text-inverted);
@@ -103,7 +124,7 @@ h1, h2, h3, h4, h5 {
   font-weight: 600;
   line-height: 150%;
   margin-bottom: var(--space-medium);
-  margin-top: var(--space-xlarge);
+  margin-top: var(--space-top);
 }
 
 h1 {
@@ -152,6 +173,25 @@ dd, dt, address, time {
   font-style: normal;
 }
 
+label {
+  font-weight: var(--semibold);
+  position: absolute;
+  margin-top: 0.35rem;
+  margin-left: 0.45rem;
+  font-size: var(--font-size-small);
+  display: none;
+}
+
+input {
+  padding: var(--space-small) var(--space-small) var(--space-small);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+}
+input:focus {
+  border-color: var(--text);
+  outline: 1px solid var(--text);
+}
+
 :root {
   --space-xlarge: 3rem;
   --space-large: 1.5rem;
@@ -159,7 +199,8 @@ dd, dt, address, time {
   --space-small: 0.75rem;
   --space-xs: 0.5rem;
   --space-tiny: 0.25rem;
-  --border-radius: 0.5rem;
+  --space-top: 2rem;
+  --border-radius: 0.25rem;
 }
 
 /* Generic layout classes */
@@ -206,7 +247,7 @@ body {
   margin: 0;
 }
 
-header, main, nav.main, article {
+header, main, nav.main, nav.breadcrumb, article {
   max-width: 1280px;
   margin: 0 auto;
   padding: var(--space-large);
@@ -258,7 +299,8 @@ article .preamble {
   max-width: 70vw;
 }
 article .content {
-  max-width: 62vw;
+  margin-top: var(--space-top);
+  max-width: 58vw;
 }
 
 @media screen and (max-width: 720px) {
@@ -271,6 +313,10 @@ article .content {
 }
 footer {
   padding: var(--space-xlarge) 0 4rem;
+}
+
+.info {
+  padding: var(--space-top) 0;
 }
 
 .list h3 {
@@ -315,6 +361,9 @@ footer {
 .list article a {
   color: var(--text);
 }
+.list article p.datetime {
+  font-weight: var(--semibold);
+}
 
 .link-list ul {
   list-style: none;
@@ -330,6 +379,21 @@ footer {
   background-color: #000;
 }
 
+.breadcrumb ol {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+.breadcrumb ol li::after {
+  content: ">";
+  margin-left: var(--space-tiny);
+}
+.breadcrumb ol li:last-of-type::after {
+  content: "";
+}
+
 nav.main {
   gap: var(--space-medium);
 }
@@ -337,12 +401,11 @@ nav.main a {
   display: inline-block;
   padding: var(--space-small) var(--space-medium);
 }
-nav.main a.is-active {
-  text-decoration: none;
-  font-weight: 500;
-}
 
 nav.tools a.icon {
+  background-position: 1.25rem 1rem;
+  background-repeat: no-repeat;
+  background-size: 1.5rem 1.5rem;
   display: inline-block;
   padding: var(--space-small) var(--space-medium);
   border-radius: var(--border-radius);
@@ -353,17 +416,14 @@ nav.tools a.icon {
   background-color: var(--text-inverted);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   padding: 1.25rem 1.5rem 1.25rem 3.5rem;
-  background-position: 1.25rem 1rem;
-  background-repeat: no-repeat;
-  background-size: 1.5rem 1.5rem;
 }
 nav.tools a.icon:hover, nav.tools a.icon:focus {
   color: var(--text-inverted);
   border-color: var(--text);
   border-width: 0;
   background-color: var(--darkest);
-  box-shadow: none;
-  margin: 1px 0;
+  box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.9);
+  margin: 1px 1px;
 }
 nav.tools .icon-pie {
   background-image: url("/assets/icons/pie.svg");
@@ -374,6 +434,12 @@ nav.tools .icon-checklist {
 nav.tools .icon-bars {
   background-image: url("/assets/icons/bars.svg");
 }
+nav.tools .icon-download {
+  background-image: url("/assets/icons/download.svg");
+}
+nav.tools .icon-calendar {
+  background-image: url("/assets/icons/calendar.svg");
+}
 
 .indicators {
   gap: var(--space-medium);
@@ -381,7 +447,7 @@ nav.tools .icon-bars {
 .indicators .item {
   padding: var(--space-small) var(--space-medium) var(--space-small);
   border: 1px solid var(--border-color);
-  border-radius: var(--space-medium);
+  border-radius: var(--border-radius);
   width: 20%;
   background-color: var(--text-inverted);
 }
@@ -432,10 +498,17 @@ nav.tools .icon-bars {
   display: flex;
   flex-direction: column;
 }
+.search .row {
+  gap: var(--space-tiny);
+}
 
+.logo a {
+  text-decoration: none;
+}
 .logo a:hover, .logo a:focus {
   background-color: transparent;
   color: var(--text);
+  text-decoration: none;
 }
 
 table {
@@ -449,19 +522,39 @@ caption {
   margin-bottom: var(--space-small);
 }
 
+th {
+  font-weight: var(--semibold);
+}
+
+table.indicator tr :first-child {
+  display: none;
+}
+table.indicator tr td, table.indicator tr th {
+  text-align: right;
+  border-top: 0;
+}
+table.indicator tr td:first-of-type, table.indicator tr th:nth-of-type(2) {
+  border-left-width: 0;
+}
+table.indicator tr td {
+  font-size: var(--header-h3);
+  font-weight: var(--bold);
+  padding-top: 0;
+}
+
 table {
-  margin-bottom: var(--space-xlarge);
+  border-spacing: 0;
+  margin-top: var(--space-top);
 }
 table th, table td {
   padding: var(--space-small);
   margin: 0;
   border-width: 0;
+  border-left: 1px solid var(--table-border-color);
 }
 table tr > th:first-of-type {
   padding-left: 0;
-}
-table tr > td:nth-of-type(n + 1), table tr > th:nth-of-type(n + 2) {
-  border-left: 1px solid var(--table-border-color);
+  border-left-width: 0;
 }
 table td {
   text-align: right;
@@ -473,6 +566,9 @@ table tbody th, table tbody td {
   border-top: 1px solid var(--table-border-color);
 }
 
+footer {
+  margin-top: var(--space-top);
+}
 footer h3 {
   margin: 0;
 }

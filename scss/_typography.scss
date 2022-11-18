@@ -50,6 +50,11 @@ a {
     display: inline-block;
 }
 
+a.is-active {
+    text-decoration: none;
+    font-weight: 500;
+}
+
 a, a h3 {
     &.is-active, &:hover, &:focus {
         color: var(--text-inverted);
@@ -58,12 +63,26 @@ a, a h3 {
     }
 }
 
+ol li, ul li {
+    padding: var(--space-tiny);
+}
+
+ul li {
+    margin: -0.5rem;
+}
+
+ol, ul {
+    padding: 0 var(--space-large);
+    margin-bottom: var(--space-xlarge);
+}
+
 a.readmore {
+    margin-top: var(--space-tiny);
     color: var(--link);
     display: inline-block;
-    margin-left: -0.5rem;
-    padding: var(--space-small) var(--space-medium) var(--space-small);
-
+    padding: var(--space-small) var(--space-tiny);
+    font-size: var(--font-size-small);
+ 
     &:hover, &:focus {
         color: var(--text-inverted);
         background-color: var(--text);
@@ -88,7 +107,7 @@ p {
     font-weight: 600;
     line-height: 150%;
     margin-bottom: var(--space-medium);
-    margin-top: var(--space-xlarge);
+    margin-top: var(--space-top);
 }
 
 h1, h2, h3, h4, h5 {
@@ -141,4 +160,24 @@ caption .subcaption {
 
 dd, dt, address, time {
     font-style: normal;
+}
+
+label {
+    font-weight: var(--semibold);
+    position: absolute;
+    margin-top: 0.35rem;
+    margin-left: 0.45rem;
+    font-size: var(--font-size-small);
+    display: none;
+}
+
+input {
+    padding: var(--space-small) var(--space-small) var(--space-small);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+
+    &:focus {
+        border-color: var(--text);
+        outline: 1px solid var(--text);
+    }
 }

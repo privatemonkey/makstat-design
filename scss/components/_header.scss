@@ -1,6 +1,10 @@
 .logo {
+    a {
+        text-decoration: none;
+    }
     a:hover, a:focus {
         background-color: transparent;
         color: var(--text);
+        text-decoration: none;
     }
 }

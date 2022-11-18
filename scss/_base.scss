@@ -14,6 +14,8 @@ button {
         background-color: var(--text-inverted);
         color: var(--text);
         border-color: var(--darkest);
+        outline: 1px solid var(--darkest);
+        text-decoration: underline;
         cursor: pointer;
     }
 }

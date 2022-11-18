@@ -1,3 +1,25 @@
+@mixin icon {
+    background-position: 1.25rem 1rem;
+    background-repeat: no-repeat;
+    background-size: 1.5rem 1.5rem;
+}
+
+.breadcrumb ol {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+
+    li::after {
+        content: '>';
+        margin-left: var(--space-tiny);
+    }
+    li:last-of-type::after {
+        content: '';
+    }
+}
+
 nav.main {
     gap: var(--space-medium);
     
@@ -5,15 +27,11 @@ nav.main {
         display: inline-block;
         padding: var(--space-small) var(--space-medium);
     }
-
-    a.is-active {
-        text-decoration: none;
-        font-weight: 500;
-    }
 }
 
 nav.tools {
     a.icon {
+        @include icon;
         display: inline-block;
         padding: var(--space-small) var(--space-medium);
         border-radius: var(--border-radius);
@@ -24,17 +42,14 @@ nav.tools {
         background-color: var(--text-inverted);
         box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         padding: 1.25rem 1.5rem 1.25rem 3.5rem;
-        background-position: 1.25rem 1rem;
-        background-repeat: no-repeat;
-        background-size: 1.5rem 1.5rem;
 
         &:hover, &:focus {
             color: var(--text-inverted);
             border-color: var(--text);
             border-width: 0;
             background-color: var(--darkest);
-            box-shadow: none;
-            margin: 1px 0;
+            box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.9);
+            margin: 1px 1px;
         }
     }
 
@@ -46,5 +61,11 @@ nav.tools {
     }
     .icon-bars {
         background-image: url('/assets/icons/bars.svg');
+    }
+    .icon-download {
+        background-image: url('/assets/icons/download.svg');
+    }
+    .icon-calendar {
+        background-image: url('/assets/icons/calendar.svg');
     }
 }
