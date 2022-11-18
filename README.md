@@ -17,6 +17,7 @@ It includes a basic server for development purpose, a SASS and component setup.
 
 - Make sure you have Node.js and NPM installed.
 - Install live-server
+- Github desktop is a good help
 
 ### Install server
 
