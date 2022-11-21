@@ -1,4 +1,6 @@
 .list {
+    width: 100%;
+
     h3 {
         font-size: var(--font-size-large);
         font-weight: var(--semibold);
@@ -11,9 +13,11 @@
     }
 
     article.release {
+        width: 100%;
         display: grid;
         grid-template-areas: 'date title'
                             'date content';
+        justify-content: start;
 
         h3 {
             grid-area: title;
@@ -40,6 +44,7 @@
     }
 
     article {
+        width: 100%;
         display: flex;
         flex-direction: column;
         margin-bottom: var(--space-medium);
