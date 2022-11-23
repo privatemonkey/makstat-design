@@ -125,13 +125,13 @@ body {
     margin: 0;
 }
 
-header, main, nav.main, nav.breadcrumb, article {
+header, main, nav.main, article {
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 var(--space-large)
 }
 
-main article {
+main .list article, article article {
     padding: 0;
 }
 

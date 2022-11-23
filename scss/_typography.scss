@@ -90,6 +90,12 @@ ol, ul {
     --space-between: 0;
 }
 
+.content {
+    li {
+        margin-bottom: var(--space-small);
+    }
+}
+
 a.readmore {
     margin-top: var(--space-tiny);
     color: var(--link);

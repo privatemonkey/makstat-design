@@ -144,6 +144,10 @@ ol, ul {
   --space-between: 0;
 }
 
+.content li {
+  margin-bottom: var(--space-small);
+}
+
 a.readmore {
   margin-top: var(--space-tiny);
   color: var(--link);
@@ -368,13 +372,13 @@ body {
   margin: 0;
 }
 
-header, main, nav.main, nav.breadcrumb, article {
+header, main, nav.main, article {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 var(--space-large);
 }
 
-main article {
+main .list article, article article {
   padding: 0;
 }
 
