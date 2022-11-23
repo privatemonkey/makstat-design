@@ -29,6 +29,7 @@
             flex-direction: column;
             padding: 0 var(--space-medium) var(--space-small) 0;
             margin: 0;
+            align-items: center;
         }
         p {
             grid-area: content;
@@ -36,6 +37,7 @@
 
         .date {
             font-weight: var(--bold);
+            font-size: var(--header-h3);
             margin: var(--space-small) 0;
         }
         .month {

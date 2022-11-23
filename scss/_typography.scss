@@ -67,12 +67,16 @@ a.is-active {
     font-weight: 500;
 }
 
-a, a h3 {
+a, a > h3 {
     &.is-active, &:hover, &:focus {
         color: var(--text-inverted);
         background-color: var(--darkest);
         text-decoration: none;
     }
+}
+
+a:has(h3) {
+    text-decoration: none;
 }
 
 ol li, ul li {
@@ -126,21 +130,26 @@ h1, h2, h3, h4, h5 {
 
 h1 {
     font-size: var(--header-h1);
+    max-width: 42ch;
 }
 
 h2 {
     font-size: var(--header-h2);
+    max-width: 45ch;
 }
 
 h3 {
     font-size: var(--header-h3);
+    max-width: 56ch;
 }
 
 h4 {
     font-size: var(--header-h4);
+    max-width: 60ch;
 }
 h5 {
     font-size: var(--header-h5);
+    max-width: 64ch;
 }
 
 .smaller-headings {

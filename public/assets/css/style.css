@@ -123,9 +123,13 @@ a.is-active {
   font-weight: 500;
 }
 
-a.is-active, a:hover, a:focus, a h3.is-active, a h3:hover, a h3:focus {
+a.is-active, a:hover, a:focus, a > h3.is-active, a > h3:hover, a > h3:focus {
   color: var(--text-inverted);
   background-color: var(--darkest);
+  text-decoration: none;
+}
+
+a:has(h3) {
   text-decoration: none;
 }
 
@@ -171,22 +175,27 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   font-size: var(--header-h1);
+  max-width: 42ch;
 }
 
 h2 {
   font-size: var(--header-h2);
+  max-width: 45ch;
 }
 
 h3 {
   font-size: var(--header-h3);
+  max-width: 56ch;
 }
 
 h4 {
   font-size: var(--header-h4);
+  max-width: 60ch;
 }
 
 h5 {
   font-size: var(--header-h5);
+  max-width: 64ch;
 }
 
 .smaller-headings h2 {
@@ -458,12 +467,14 @@ footer {
   flex-direction: column;
   padding: 0 var(--space-medium) var(--space-small) 0;
   margin: 0;
+  align-items: center;
 }
 .list article.release p {
   grid-area: content;
 }
 .list article.release .date {
   font-weight: var(--bold);
+  font-size: var(--header-h3);
   margin: var(--space-small) 0;
 }
 .list article.release .month {
