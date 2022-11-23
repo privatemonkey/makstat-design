@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" href="/assets/icons/favicon.png" />
+        <link rel="stylesheet" href="/assets/css/style.css" />
+        <!-- Remove templating from production -->
+        <link rel="stylesheet" href="/_system/templating.css" />
+        <script src="/_system/templating.js"></script>
+        <!-- End templating-->
+        
+        <title>Statistics, MakStat</title>
+    </head>
+    <body>
+        <nav class="templating"><button onclick="toggleCode()">Toggle code</button></nav>
+        <header>
+            <div data-include="/components/logo/logo.html"></div>
+            <div data-include="/components/search/search.html"></div>
+        </header>
+        <div data-include="/components/navigation/topmenu/_.html"></div>
+        <main>
+            <h1>Statistics</h1>
+            <p>Specially designed landing page "Statistics"</p>
+        </main>
+        
+        <div data-include="/elements/footer.html"></div>
+ 
+    </body>
+    <script>    
+        includeHTML()
+    </script> 
+</html>
