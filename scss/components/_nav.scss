@@ -4,6 +4,25 @@
     background-size: 1.5rem 1.5rem;
 }
 
+nav.pagination {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-between);
+
+    a {
+        display: inline-block;
+        padding: var(--space-small);
+        border: 1px solid var(--border-color);
+        border-radius: var(--border-radius);
+        background-color: var(--panel-background);
+        color: var(--link);
+    }
+}
+
+article nav.tools {
+    margin-bottom: var(--space-between);
+}
+
 nav.breadcrumb { 
     padding-top: 0;
     padding-bottom: 0;
@@ -106,8 +125,4 @@ nav.tools {
     .icon-person {
         background-image: url('/assets/icons/person.svg');
     }
-}
-
-article nav.tools {
-    margin-bottom: var(--space-between);
 }
