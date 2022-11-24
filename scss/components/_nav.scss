@@ -15,8 +15,9 @@ nav.breadcrumb {
         padding: 0;
 
         li::after {
-            content: '>';
+            content: '/';
             margin-left: var(--space-tiny);
+            margin-right: var(--space-tiny);
         }
         li:last-of-type::after {
             content: '';
@@ -40,6 +41,27 @@ nav.main {
     }
 }
 
+@media screen and (max-width: 480px) {
+    nav.main {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        a {
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            background-color: var(--panel-background);
+            color: var(--link);
+
+            &:hover, &:focus, &.is-active {
+                color: var(--text-inverted);
+                background-color: var(--darkest);
+            }
+        }
+    }
+    
+}
+
 nav.tools {
     a.icon {
         @include icon;
@@ -53,6 +75,7 @@ nav.tools {
         background-color: var(--text-inverted);
         box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         padding: 1.25rem 1.5rem 1.25rem 3.5rem;
+        align-self: start;
 
         &:hover, &:focus {
             color: var(--text-inverted);
@@ -79,4 +102,12 @@ nav.tools {
     .icon-calendar {
         background-image: url('/assets/icons/calendar.svg');
     }
+
+    .icon-person {
+        background-image: url('/assets/icons/person.svg');
+    }
+}
+
+article nav.tools {
+    margin-bottom: var(--space-between);
 }

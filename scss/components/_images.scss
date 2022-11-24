@@ -1,0 +1,25 @@
+.background-image {
+    background-repeat: no-repeat;
+    padding: 1rem 2rem;
+}
+
+@media screen and (max-width: 640px) {
+    .background-cover { 
+        padding: 2rem 0.5rem;
+    }
+}
+
+.background-1 {
+    background-image: url('/assets/img/background-01.jpg');
+}
+
+.background-2 {
+    background-image: url('/assets/img/background-02.jpg');
+}
+
+main header.background-image {
+    color: white;
+    text-shadow: 0 0 6px black;
+    margin-bottom: 2rem;
+    line-height: 100%;
+}

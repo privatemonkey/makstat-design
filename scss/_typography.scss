@@ -8,8 +8,18 @@
     src: url('/assets/fonts/PublicSans-VariableFont_wght.ttf')
 }
 
-$font_sansserif: 'Montserrat', sans-serif;
-$font_numbers: 'Public Sans', sans-serif;
+@font-face {
+    font-family: 'Finlandica';
+    src: url('/assets/fonts/Finlandica-VariableFont_wght.ttf')
+}
+
+@font-face {
+    font-family: 'Jost';
+    src: url('/assets/fonts/Jost-VariableFont_wght.ttf')
+}
+
+$font_sansserif: 'Jost', sans-serif;
+$font_numbers: 'Jost', sans-serif;
 
 :root {
     /* Header sizes */
@@ -20,6 +30,8 @@ $font_numbers: 'Public Sans', sans-serif;
     --header-h5: 1.5rem; 
     --header-h6: 1.25rem; 
     --header-h7: 1rem; 
+
+    --header-top-space: 2rem;
 
     /* Text sizes */
     --font-size-xlarge: 1.5rem;
@@ -38,85 +50,17 @@ body, input, button, textarea {
     font-family: $font_sansserif;
     font-size: var(--font-size-medium);
     font-weight: normal;
+    font-variant-numeric: lining-nums;
+    letter-spacing: 0.015rem;
 }
 
-p {
-    max-width: 65ch;
-}
-
-.preamble {
-    font-size: var(--font-size-xlarge);
-    font-weight: var(--semibold);
-    max-width: 42ch;
-}
-
-.links-inverted a {
-    color: var(--text-inverted);
-
-    &:hover, &:hover {
-        background-color: var(--text);
-    }
-}
-a {
-    color: var(--link);
-    display: inline-block;
-}
-
-a.is-active {
-    text-decoration: none;
-    font-weight: 500;
-}
-
-a, a > h3 {
-    &.is-active, &:hover, &:focus {
-        color: var(--text-inverted);
-        background-color: var(--darkest);
-        text-decoration: none;
-    }
-}
-
-a:has(h3) {
-    text-decoration: none;
-}
-
-ol li, ul li {
-    padding: 0;
-    margin: 0;
-}
-
-ol, ul {
-    padding: 0 var(--space-large);
-    margin-bottom: var(--space-xlarge);
-    --space-between: 0;
-}
-
-.content {
-    li {
-        margin-bottom: var(--space-small);
-    }
-}
-
-a.readmore {
-    margin-top: var(--space-tiny);
-    color: var(--link);
-    display: inline-block;
-    padding: var(--space-small) var(--space-tiny);
-    font-size: var(--font-size-small);
- 
-    &:hover, &:focus {
-        color: var(--text-inverted);
-        background-color: var(--darkest);
-    }
-}
-
-::selection {
-    background-color: var(--selection);
-    color: var(--text);
-    text-decoration: none;
+table td {
+    font-variant-numeric: tabular-nums;
 }
 
 @mixin text {
     line-height: 115%;
+    max-width: 65ch;
 }
 
 p {
@@ -125,9 +69,10 @@ p {
 
 @mixin heading {
     font-weight: 600;
-    line-height: 150%;
+    line-height: 130%;
     margin-bottom: var(--space-medium);
-    margin-top: var(--space-top);
+    margin-top: var(--header-top-space);
+    letter-spacing: 0.025rem;
 }
 
 h1, h2, h3, h4, h5 {
@@ -175,6 +120,7 @@ h5 {
 caption {
     font-size: var(--header-h4);
     font-weight: var(--bold);
+    margin-top: var(--space-top);
 }
 caption .subcaption {
     display: inline-block;
@@ -205,4 +151,75 @@ input {
         border-color: var(--text);
         outline: 1px solid var(--text);
     }
+}
+
+.preamble {
+    font-size: var(--font-size-xlarge);
+    font-weight: var(--semibold);
+    max-width: 42ch;
+}
+
+.links-inverted a {
+    color: var(--text-inverted);
+
+    &:hover, &:hover {
+        background-color: var(--text);
+    }
+}
+a {
+    color: var(--link);
+    display: inline-block;
+}
+
+a.is-active {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a, a > h3 {
+    &.is-active, &:hover, &:focus {
+        color: var(--text-inverted);
+        background-color: var(--darkest);
+        text-decoration: none;
+    }
+}
+
+a:has(h3) {
+    text-decoration: none;
+}
+
+a.readmore {
+    margin-top: var(--space-tiny);
+    color: var(--link);
+    display: inline-block;
+    padding: var(--space-small) var(--space-tiny);
+    font-size: var(--font-size-small);
+ 
+    &:hover, &:focus {
+        color: var(--text-inverted);
+        background-color: var(--darkest);
+    }
+}
+
+ol li, ul li {
+    padding: 0;
+    margin: 0;
+}
+
+ol, ul {
+    padding: 0 var(--space-large);
+    margin-bottom: var(--space-xlarge);
+    --space-between: 0;
+}
+
+.content {
+    li {
+        margin-bottom: var(--space-small);
+    }
+}
+
+::selection {
+    background-color: var(--selection);
+    color: var(--text);
+    text-decoration: none;
 }

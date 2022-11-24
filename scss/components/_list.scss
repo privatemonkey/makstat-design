@@ -1,6 +1,4 @@
 .list {
-    width: 100%;
-
     h3 {
         font-size: var(--font-size-large);
         font-weight: var(--semibold);
@@ -50,6 +48,7 @@
         display: flex;
         flex-direction: column;
         margin-bottom: var(--space-medium);
+        gap: 0.25rem;
 
         a {
             color: var(--text);
@@ -61,10 +60,30 @@
     }
 }
 
+.list-cards {
+    a {
+        color: var(--text);
+        text-decoration: none;
+
+        h3 {
+            text-decoration: underline;
+        }
+
+        &:hover, &:focus {
+            color: var(--text-inverted);
+
+            img {
+                filter: grayscale(100%);
+            }
+        }
+    }
+}
+
 .link-list {
     ul {
         list-style: '■';
-        padding: var(--space-medium);
+        padding: 0 var(--space-xs);
+        margin-bottom: var(--space-medium);
     }
     li a {
         display: inline-block;

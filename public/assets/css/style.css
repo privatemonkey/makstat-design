@@ -69,6 +69,14 @@ button:hover, button:focus, button.primary:hover, button.primary:focus, button.s
   font-family: "Public Sans";
   src: url("/assets/fonts/PublicSans-VariableFont_wght.ttf");
 }
+@font-face {
+  font-family: "Finlandica";
+  src: url("/assets/fonts/Finlandica-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Jost";
+  src: url("/assets/fonts/Jost-VariableFont_wght.ttf");
+}
 :root {
   /* Header sizes */
   --header-h1: 3.2rem;
@@ -78,6 +86,7 @@ button:hover, button:focus, button.primary:hover, button.primary:focus, button.s
   --header-h5: 1.5rem;
   --header-h6: 1.25rem;
   --header-h7: 1rem;
+  --header-top-space: 2rem;
   /* Text sizes */
   --font-size-xlarge: 1.5rem;
   --font-size-large: 1.2rem;
@@ -91,90 +100,28 @@ button:hover, button:focus, button.primary:hover, button.primary:focus, button.s
 }
 
 body, input, button, textarea {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Jost", sans-serif;
   font-size: var(--font-size-medium);
   font-weight: normal;
+  font-variant-numeric: lining-nums;
+  letter-spacing: 0.015rem;
 }
 
-p {
-  max-width: 65ch;
-}
-
-.preamble {
-  font-size: var(--font-size-xlarge);
-  font-weight: var(--semibold);
-  max-width: 42ch;
-}
-
-.links-inverted a {
-  color: var(--text-inverted);
-}
-.links-inverted a:hover, .links-inverted a:hover {
-  background-color: var(--text);
-}
-
-a {
-  color: var(--link);
-  display: inline-block;
-}
-
-a.is-active {
-  text-decoration: none;
-  font-weight: 500;
-}
-
-a.is-active, a:hover, a:focus, a > h3.is-active, a > h3:hover, a > h3:focus {
-  color: var(--text-inverted);
-  background-color: var(--darkest);
-  text-decoration: none;
-}
-
-a:has(h3) {
-  text-decoration: none;
-}
-
-ol li, ul li {
-  padding: 0;
-  margin: 0;
-}
-
-ol, ul {
-  padding: 0 var(--space-large);
-  margin-bottom: var(--space-xlarge);
-  --space-between: 0;
-}
-
-.content li {
-  margin-bottom: var(--space-small);
-}
-
-a.readmore {
-  margin-top: var(--space-tiny);
-  color: var(--link);
-  display: inline-block;
-  padding: var(--space-small) var(--space-tiny);
-  font-size: var(--font-size-small);
-}
-a.readmore:hover, a.readmore:focus {
-  color: var(--text-inverted);
-  background-color: var(--darkest);
-}
-
-::selection {
-  background-color: var(--selection);
-  color: var(--text);
-  text-decoration: none;
+table td {
+  font-variant-numeric: tabular-nums;
 }
 
 p {
   line-height: 115%;
+  max-width: 65ch;
 }
 
 h1, h2, h3, h4, h5 {
   font-weight: 600;
-  line-height: 150%;
+  line-height: 130%;
   margin-bottom: var(--space-medium);
-  margin-top: var(--space-top);
+  margin-top: var(--header-top-space);
+  letter-spacing: 0.025rem;
 }
 
 h1 {
@@ -215,6 +162,7 @@ h5 {
 caption {
   font-size: var(--header-h4);
   font-weight: var(--bold);
+  margin-top: var(--space-top);
 }
 
 caption .subcaption {
@@ -247,6 +195,72 @@ input:focus {
   outline: 1px solid var(--text);
 }
 
+.preamble {
+  font-size: var(--font-size-xlarge);
+  font-weight: var(--semibold);
+  max-width: 42ch;
+}
+
+.links-inverted a {
+  color: var(--text-inverted);
+}
+.links-inverted a:hover, .links-inverted a:hover {
+  background-color: var(--text);
+}
+
+a {
+  color: var(--link);
+  display: inline-block;
+}
+
+a.is-active {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a.is-active, a:hover, a:focus, a > h3.is-active, a > h3:hover, a > h3:focus {
+  color: var(--text-inverted);
+  background-color: var(--darkest);
+  text-decoration: none;
+}
+
+a:has(h3) {
+  text-decoration: none;
+}
+
+a.readmore {
+  margin-top: var(--space-tiny);
+  color: var(--link);
+  display: inline-block;
+  padding: var(--space-small) var(--space-tiny);
+  font-size: var(--font-size-small);
+}
+a.readmore:hover, a.readmore:focus {
+  color: var(--text-inverted);
+  background-color: var(--darkest);
+}
+
+ol li, ul li {
+  padding: 0;
+  margin: 0;
+}
+
+ol, ul {
+  padding: 0 var(--space-large);
+  margin-bottom: var(--space-xlarge);
+  --space-between: 0;
+}
+
+.content li {
+  margin-bottom: var(--space-small);
+}
+
+::selection {
+  background-color: var(--selection);
+  color: var(--text);
+  text-decoration: none;
+}
+
 :root {
   --space-xlarge: 3rem;
   --space-large: 1.5rem;
@@ -254,7 +268,7 @@ input:focus {
   --space-small: 0.75rem;
   --space-xs: 0.5rem;
   --space-tiny: 0.25rem;
-  --space-top: 2rem;
+  --space-top: 1rem;
   --space-between: 1rem;
   --border-radius: 0.25rem;
 }
@@ -384,8 +398,6 @@ main .list article, article article {
 
 footer {
   width: 100vw;
-  color: var(--text-inverted);
-  background-color: var(--darkest);
 }
 
 footer > * {
@@ -444,9 +456,6 @@ footer {
   padding: var(--space-top) 0;
 }
 
-.list {
-  width: 100%;
-}
 .list h3 {
   font-size: var(--font-size-large);
   font-weight: var(--semibold);
@@ -489,6 +498,7 @@ footer {
   display: flex;
   flex-direction: column;
   margin-bottom: var(--space-medium);
+  gap: 0.25rem;
 }
 .list article a {
   color: var(--text);
@@ -497,9 +507,24 @@ footer {
   font-weight: var(--semibold);
 }
 
+.list-cards a {
+  color: var(--text);
+  text-decoration: none;
+}
+.list-cards a h3 {
+  text-decoration: underline;
+}
+.list-cards a:hover, .list-cards a:focus {
+  color: var(--text-inverted);
+}
+.list-cards a:hover img, .list-cards a:focus img {
+  filter: grayscale(100%);
+}
+
 .link-list ul {
   list-style: "■";
-  padding: var(--space-medium);
+  padding: 0 var(--space-xs);
+  margin-bottom: var(--space-medium);
 }
 .link-list li a {
   display: inline-block;
@@ -518,8 +543,9 @@ nav.breadcrumb ol {
   padding: 0;
 }
 nav.breadcrumb ol li::after {
-  content: ">";
+  content: "/";
   margin-left: var(--space-tiny);
+  margin-right: var(--space-tiny);
 }
 nav.breadcrumb ol li:last-of-type::after {
   content: "";
@@ -539,6 +565,23 @@ nav.main a {
   padding: var(--space-small) var(--space-medium);
 }
 
+@media screen and (max-width: 480px) {
+  nav.main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  nav.main a {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: var(--panel-background);
+    color: var(--link);
+  }
+  nav.main a:hover, nav.main a:focus, nav.main a.is-active  {
+    color: var(--text-inverted);
+    background-color: var(--darkest);
+  }
+}
 nav.tools a.icon {
   background-position: 1.25rem 1rem;
   background-repeat: no-repeat;
@@ -553,6 +596,7 @@ nav.tools a.icon {
   background-color: var(--text-inverted);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   padding: 1.25rem 1.5rem 1.25rem 3.5rem;
+  align-self: start;
 }
 nav.tools a.icon:hover, nav.tools a.icon:focus {
   color: var(--text-inverted);
@@ -576,6 +620,13 @@ nav.tools .icon-download {
 }
 nav.tools .icon-calendar {
   background-image: url("/assets/icons/calendar.svg");
+}
+nav.tools .icon-person {
+  background-image: url("/assets/icons/person.svg");
+}
+
+article nav.tools {
+  margin-bottom: var(--space-between);
 }
 
 .indicators .item .unit, .indicators .item .period, .indicators .item h3 {
@@ -614,13 +665,29 @@ nav.tools .icon-calendar {
   gap: var(--space-tiny);
 }
 
-.logo a {
-  text-decoration: none;
+.background-image {
+  background-repeat: no-repeat;
+  padding: 1rem 2rem;
 }
-.logo a:hover, .logo a:focus {
-  background-color: transparent;
-  color: var(--text);
-  text-decoration: none;
+
+@media screen and (max-width: 640px) {
+  .background-cover {
+    padding: 2rem 0.5rem;
+  }
+}
+.background-1 {
+  background-image: url("/assets/img/background-01.jpg");
+}
+
+.background-2 {
+  background-image: url("/assets/img/background-02.jpg");
+}
+
+main header.background-image {
+  color: white;
+  text-shadow: 0 0 6px black;
+  margin-bottom: 2rem;
+  line-height: 100%;
 }
 
 table {
@@ -657,6 +724,7 @@ table.indicator tr td {
 table {
   border-spacing: 0;
   margin-top: var(--space-top);
+  margin-bottom: var(--space-large);
 }
 table th, table td {
   padding: var(--space-small);
@@ -682,7 +750,9 @@ table caption {
 }
 
 footer {
-  margin-top: var(--space-top);
+  margin-top: var(--space-xlarge);
+  color: var(--text-inverted);
+  background-color: var(--darkest);
 }
 footer h3 {
   margin: 0;
@@ -690,6 +760,22 @@ footer h3 {
 footer span {
   display: inline-block;
   line-height: 150%;
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+.logo a {
+  text-decoration: none;
+}
+.logo a:hover, .logo a:focus {
+  background-color: transparent;
+  color: var(--text);
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */

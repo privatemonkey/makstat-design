@@ -6,7 +6,7 @@
     --space-xs: 0.5rem;
     --space-tiny: 0.25rem;
 
-    --space-top: 2rem;
+    --space-top: 1rem;
     --space-between: 1rem;
 
     --border-radius: 0.25rem;
@@ -137,9 +137,8 @@ main .list article, article article {
 
 footer {
     width: 100vw;
-    color: var(--text-inverted);
-    background-color: var(--darkest);
 }
+
 footer > * {
     max-width: 1280px;
     margin: 0 auto;
