@@ -65,7 +65,7 @@
                             'text img'
                             'date img'
         ;
-        grid-template-columns: 1fr min(50%, 240px);
+        grid-template-columns: 2fr 1fr;
         gap: var(--space-small);
 
         a {
@@ -82,7 +82,7 @@
 
             img {
                 width: 100%;
-                max-width: min(50%, 240px);
+                max-width: min(100%, 240px);
             }
         }
     }
