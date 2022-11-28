@@ -142,7 +142,8 @@ main .list article, article article {
 }
 
 footer {
-    width: 100vw;
+    max-width: 100vw;
+    margin: var(--space-large) 0 0;
 }
 
 footer > * {
@@ -202,10 +203,6 @@ article {
                 max-width: calc(100vw - var(--space-large) - var(--space-large));;
             }
     }
-}
-
-footer {
-    padding: var(--space-xlarge) 0 4rem;
 }
 
 .info {

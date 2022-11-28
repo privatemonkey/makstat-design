@@ -49,13 +49,6 @@ button, button.primary, button.secondary, button.tertiar, input[type=button], in
     }
 }
 
-form {
-    background-color: var(--white);
-    border-radius: var(--border-radius);
-    border: 1px solid var(--border-color);
-    padding: var(--space-between) var(--space-medium);
-
-}
 fieldset {
     padding: 0;
     border: none;

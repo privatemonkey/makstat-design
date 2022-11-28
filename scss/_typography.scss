@@ -202,6 +202,7 @@ a.readmore {
     display: inline-block;
     padding: var(--space-small) var(--space-tiny);
     font-size: var(--font-size-small);
+    align-self: start;
  
     &:hover, &:focus {
         color: var(--text-inverted);
