@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" href="/assets/icons/favicon.png" />
+        <link rel="stylesheet" href="/assets/css/style.css" />
+        <!-- Remove templating from production -->
+        <link rel="stylesheet" href="/_system/templating.css" />
+        <script src="/_system/templating.js"></script>
+        <!-- End templating-->
+        
+        <title>Detail page (News), MakStat templates</title>
+    </head>
+    <body>
+        <nav class="templating"><button onclick="toggleCode()">Toggle code</button></nav>
+        <header>
+            <div data-include="/components/logo/logo.html"></div>
+            <div data-include="/components/search/search.html"></div>
+        </header>
+        
+        <div data-include="/components/navigation/topmenu/start.html"></div>
+            
+        <main>
+        <article>
+            <div data-include="/components/navigation/breadcrumb/news-detail.html"></div>
+            <header>
+                <span class="vignette">News</span>
+                <time class="datetime">Published: 2022-11-11, 11:00</time>
+
+                <h1>Pilot census  of Agriculture finished</h1>
+                
+                <p class="preamble">In the past two weeks, the enumerators visited and interviewed the selected family farms and business entities that are registered and engaged in activities related to agriculture throughout the country.</p>
+            </header>
+            <picture>
+                <source srcset="/assets/img/articles/agriculture.webp">
+                <img src="/assets/img/articles/agriculture.png" alt="">    
+            </picture>
+            <section class="content">
+                <p>The State Statistical Office conducted the Pilot Census of Agriculture in the period from 15th to 30th June 2022.</p>
+                <p>
+                    In the past two weeks, the enumerators visited and interviewed the selected family farms and business entities that are registered and engaged in activities related to agriculture throughout the country.</p>
+                <p>
+                    During the realization of the field activities, no difficulties were noticed and the whole activity was realized according to the expectations. The information obtained from the Pilot Census will be used to organize and conduct the main Census of Agriculture next year.</p>
+                <p>
+                    The State Statistical Office thanks the households and business entities for the cooperation and participation in this statistical action.</p>
+            </section>
+
+            <!-- Start related -->
+            <!-- Elements that shows earlier results or related content -->
+            <div data-include="/components/lists/news/start.html"></div>
+            <!-- End related -->
+
+            <div data-include="/components/contact/page.html"></div>
+        </article>
+        </main>
+
+        <div data-include="/elements/footer.html"></div>
+    </body>
+    <script>    
+        includeHTML()
+    </script> 
+</html>

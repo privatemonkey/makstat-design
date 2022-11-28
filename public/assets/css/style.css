@@ -365,6 +365,13 @@ footer span {
   text-decoration: none;
 }
 
+header.has-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 580px;
+  justify-content: end;
+}
+
 body {
   color: #333;
   background-color: #FFFCF9;
