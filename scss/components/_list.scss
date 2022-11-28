@@ -58,6 +58,34 @@
             font-weight: var(--semibold);
         }
     }
+
+    article.has-image {
+        display: grid;
+        grid-template-areas: 'header header'
+                            'text img'
+                            'date img'
+        ;
+        grid-template-columns: 1fr min(50%, 240px);
+        gap: var(--space-small);
+
+        a {
+            grid-area: header;
+        }
+        p {
+            grid-area: text;
+        }
+        p.datetime {
+            grid-area: date;
+        }
+        picture {
+            grid-area: img;
+
+            img {
+                width: 100%;
+                max-width: min(50%, 240px);
+            }
+        }
+    }
 }
 
 .list-cards {

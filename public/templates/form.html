@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" href="/assets/icons/favicon.png" />
+        <link rel="stylesheet" href="/assets/css/style.css" />
+        <!-- Remove templating from production -->
+        <link rel="stylesheet" href="/_system/templating.css" />
+        <script src="/_system/templating.js"></script>
+        <!-- End templating-->
+        
+        <title>Skeleton, MakStat templates</title>
+    </head>
+    <body>
+        <nav class="templating"><button onclick="toggleCode()">Toggle code</button></nav>
+        <header>
+            <div data-include="/components/logo/logo.html"></div>
+            <div data-include="/components/search/search.html"></div>
+        </header>
+        <div data-include="/components/navigation/topmenu/start.html"></div>
+        <main>
+            <h1>Барање на податоци</h1>
+            <p class="preamble">
+                Почитувани, доколку Ви се потребни статистички податоци Државниот завод за статистика, пополнете го следниот образец:
+            </p>
+            <p>
+                Полињата означени со *  се задолжителни за пополнување.
+            </p>
+            <form class="text-width">
+                <h2>Contact information</h2>
+                <fieldset class="column-1">
+                <label for="fullname">Име и презиме</label>
+                <input type="text" id="fullname" />
+                <label for="topic">Назив на субјектот:</label>
+                <input type="text" id="topic" /> (доколку барањето е од фирма, институција)
+                <label for="email">Е-пошта:</label>
+                <input type="text" id="email" />
+                <label for="phone">Телефон:</label>
+                <input type="text" id="phone" class="input-small" />
+                <label for="adress">Aдреса:</label>
+                <input type="text" id="adress" />
+                <label for="city">Град</label>
+                <input type="text" id="city" />
+                <label for="state">Држава</label>
+                <input type="text" id="state" />
+                </fieldset>
+                
+                <h2>Data request</h2>
+                <fieldset>
+                
+                    <h3>Во која група на корисници припаѓате:</h3>
+                    <label for="private">Приватни корисници</label>
+                    <input type="radio" id="private" name="user" />
+                    <label for="publicsector">Јавна администрација и локална самоуправа</label>
+                    <input type="radio" id="publicsector" name="user" />
+                
+                    <lable for="description">
+                        Ве молиме детално да го опишете Вашето барање за податоци:
+                    </lable>
+                    <textarea id="description" class="input-large"></textarea>
+                <button type="submit"></button>
+            </fieldset>
+            </form>
+        </main>
+        
+        <div data-include="/elements/footer.html"></div>
+ 
+    </body>
+    <script>    
+        includeHTML()
+    </script> 
+</html>

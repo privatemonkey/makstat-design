@@ -48,3 +48,42 @@ button, button.primary, button.secondary, button.tertiar, input[type=button], in
         cursor: pointer;
     }
 }
+
+fieldset {
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+}
+
+input[type=text], textarea {
+    width: 36ch;
+}
+
+textarea {
+    min-height: 6rem;
+}
+
+.input-large {
+    width: 64ch;
+}  
+.input-medium {
+    width: 36ch;
+}
+.input-small {
+    width: 24ch;
+}
+.input-xs {
+    width: 12ch;
+}
+
+
+// Figures 
+// Used for charts and complex images
+figure {
+    margin: 0;
+
+    img {
+        width: 100%;
+        max-width: 920px;
+        margin: var(--space-medium) 0;
+    }
+}

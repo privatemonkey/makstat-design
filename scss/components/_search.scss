@@ -5,4 +5,13 @@
     .row {
         gap: var(--space-tiny);
     }
+
+    label {
+        font-weight: var(--semibold);
+        position: absolute;
+        margin-top: 0.35rem;
+        margin-left: 0.45rem;
+        font-size: var(--font-size-small);
+        display: none;
+    }
 }

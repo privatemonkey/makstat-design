@@ -117,12 +117,12 @@ h5 {
     } 
 }
 
-caption {
+caption, figcaption {
     font-size: var(--header-h4);
     font-weight: var(--bold);
     margin-top: var(--space-top);
 }
-caption .subcaption {
+caption .subcaption, figcaption .subcaption {
     display: inline-block;
     width: 100%;
     font-size: var(--header-h6);
@@ -135,14 +135,9 @@ dd, dt, address, time {
 
 label {
     font-weight: var(--semibold);
-    position: absolute;
-    margin-top: 0.35rem;
-    margin-left: 0.45rem;
-    font-size: var(--font-size-small);
-    display: none;
 }
 
-input {
+input, textarea {
     padding: var(--space-small) var(--space-small) var(--space-small);
     border-radius: var(--border-radius);
     border: 1px solid var(--border-color);
@@ -166,9 +161,22 @@ input {
         background-color: var(--text);
     }
 }
-a {
+a{
     color: var(--link);
     display: inline-block;
+}
+
+details {
+    cursor: default;
+
+    summary {
+        cursor: pointer;
+    }
+}
+details:not([open]) {
+    color: var(--link);
+    display: inline-block;
+    text-decoration: underline;
 }
 
 a.is-active {
@@ -216,6 +224,11 @@ ol, ul {
     li {
         margin-bottom: var(--space-small);
     }
+}
+
+.vignette {
+    text-transform: uppercase;
+    font-weight: var(--semibold);
 }
 
 ::selection {
