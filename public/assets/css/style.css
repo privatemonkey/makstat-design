@@ -145,10 +145,10 @@ nav.breadcrumb ol a.is-active {
   text-decoration: none;
 }
 
-nav.main {
+nav.main, nav.language {
   gap: var(--space-medium);
 }
-nav.main a {
+nav.main a, nav.language a {
   display: inline-block;
   padding: var(--space-small) var(--space-medium);
 }
