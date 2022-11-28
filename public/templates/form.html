@@ -48,19 +48,21 @@
                 </fieldset>
                 
                 <h2>Data request</h2>
-                <fieldset>
-                
-                    <h3>Во која група на корисници припаѓате:</h3>
-                    <label for="private">Приватни корисници</label>
-                    <input type="radio" id="private" name="user" />
-                    <label for="publicsector">Јавна администрација и локална самоуправа</label>
-                    <input type="radio" id="publicsector" name="user" />
-                
+                <fieldset class="column-1">
+                    <legend>Во која група на корисници припаѓате:</legend>
+                    
+                    <div class="radio-list">
+                        <input type="radio" id="private" name="user" />
+                        <label for="private">Приватни корисници</label>
+                        <input type="radio" id="publicsector" name="user" />
+                        <label for="publicsector">Јавна администрација и локална самоуправа</label>
+                        
+                    </div>
                     <lable for="description">
                         Ве молиме детално да го опишете Вашето барање за податоци:
                     </lable>
                     <textarea id="description" class="input-large"></textarea>
-                <button type="submit"></button>
+                <button type="submit">Send</button>
             </fieldset>
             </form>
         </main>

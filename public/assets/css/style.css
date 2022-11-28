@@ -418,13 +418,33 @@ button:hover, button:focus, button.primary:hover, button.primary:focus, button.s
   cursor: pointer;
 }
 
-fieldset {
+form {
+  background-color: var(--white);
   border-radius: var(--border-radius);
   border: 1px solid var(--border-color);
+  padding: var(--space-between) var(--space-medium);
+}
+
+fieldset {
+  padding: 0;
+  border: none;
 }
 
 input[type=text], textarea {
-  width: 36ch;
+  width: 32ch;
+}
+
+input[type=check], input[type=radio]   {
+  width: 2rem;
+}
+
+input + label {
+  padding: var(--space-tiny);
+  font-weight: var(--normal);
+}
+input + label:hover, input + label:focus {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 textarea {
@@ -432,11 +452,11 @@ textarea {
 }
 
 .input-large {
-  width: 64ch;
+  width: 60ch;
 }
 
 .input-medium {
-  width: 36ch;
+  width: 32ch;
 }
 
 .input-small {
@@ -886,6 +906,13 @@ footer {
 
 .info {
   padding: var(--space-top) 0;
+}
+
+.radio-list, .checkbox-list {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  align-items: center;
+  justify-items: start;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -211,3 +211,10 @@ footer {
 .info {
     padding: var(--space-top) 0;
 }
+
+.radio-list, .checkbox-list {
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    align-items: center;
+    justify-items: start;
+}

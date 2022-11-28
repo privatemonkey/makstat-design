@@ -49,13 +49,32 @@ button, button.primary, button.secondary, button.tertiar, input[type=button], in
     }
 }
 
-fieldset {
+form {
+    background-color: var(--white);
     border-radius: var(--border-radius);
     border: 1px solid var(--border-color);
+    padding: var(--space-between) var(--space-medium);
+
+}
+fieldset {
+    padding: 0;
+    border: none;
 }
 
 input[type=text], textarea {
-    width: 36ch;
+    width: 32ch;
+}
+input[type=check], input[type=radio] {
+    width: 2rem;
+} 
+
+input + label {
+    padding: var(--space-tiny);
+    font-weight: var(--normal);
+    &:hover, &:focus {
+        cursor: pointer;
+        text-decoration: underline;
+     }
 }
 
 textarea {
@@ -63,10 +82,10 @@ textarea {
 }
 
 .input-large {
-    width: 64ch;
+    width: 60ch;
 }  
 .input-medium {
-    width: 36ch;
+    width: 32ch;
 }
 .input-small {
     width: 24ch;
