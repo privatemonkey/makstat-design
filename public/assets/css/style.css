@@ -182,7 +182,7 @@ nav.main a, nav.language a {
   }
 }
 .indicators .item .unit, .indicators .item .period, .indicators .item h3 {
-  font-family: "Public Sans", sans-serif;
+  font-family: "Jost", sans-serif;
 }
 .indicators .item .value {
   font-size: var(--header-h3);
