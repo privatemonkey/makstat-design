@@ -11,30 +11,26 @@
         <script src="/_system/templating.js"></script>
         <!-- End templating-->
         
-        <title>Start, MakStat templates</title>
+        <title>Publications (List), MakStat templates</title>
     </head>
     <body>
         <nav class="templating"><button onclick="toggleCode()">Toggle code</button></nav>
-
         <div data-include="/elements/header.html"></div>
         <div data-include="/components/navigation/topmenu/start.html"></div>
-        <main class="smaller-headings">
-            <header class="background-image background-2 margin-top">
-                <h1>Statistics North Macedonia</h1>
-            </header>
-            <div data-include="/components/indicators/cards/start.html"></div>
-            <div data-include="/components/tools/start.html"></div>
-            <div class="columns-2">
-                <div data-include="/components/lists/releases/start.html"></div>
-                <div data-include="/components/lists/news/start.html"></div>
-            </div>
-
-            <div data-include="/components/lists/cards/highlighted.html"></div>
+        <main>
+            <div data-include="/components/navigation/breadcrumb/news.html"></div>
+            <h1>Publications</h1>
+            <p class="preamble">Find old and new publications.</p>
+            <div data-include="/components/search/list.html"></div>
             
+            <h2>Results</h2>
+            <div data-include="/components/search/count.html"></div>
+            <div data-include="/components/lists/results/news.html"></div>
+            <div data-include="/components/navigation/pagination/default.html"></div>
         </main>
-
- 
+        
         <div data-include="/elements/footer.html"></div>
+ 
     </body>
     <script>    
         includeHTML()

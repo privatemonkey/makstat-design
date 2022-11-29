@@ -85,7 +85,7 @@
   text-decoration: underline;
 }
 .list-cards a:hover, .list-cards a:focus {
-  color: var(--text-inverted);
+  color: var(--link-hoover);
 }
 .list-cards a:hover img, .list-cards a:focus img {
   filter: grayscale(100%);
@@ -145,9 +145,6 @@ nav.breadcrumb ol a.is-active {
   text-decoration: none;
 }
 
-nav.main, nav.language {
-  gap: var(--space-medium);
-}
 nav.main a, nav.language a {
   display: inline-block;
   padding: var(--space-small) var(--space-medium);
@@ -166,8 +163,8 @@ nav.main a, nav.language a {
     color: var(--link);
   }
   nav.main a:hover, nav.main a:focus, nav.main a.is-active  {
-    color: var(--text-inverted);
-    background-color: var(--darkest);
+    color: var(--link-hover);
+    background-color: var(--link-hover-background);
   }
 }
 nav.tools a.icon {
@@ -193,24 +190,6 @@ nav.tools a.icon:hover, nav.tools a.icon:focus {
   background-color: var(--darkest);
   box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.9);
   margin: 1px 1px;
-}
-nav.tools .icon-pie {
-  background-image: url("/assets/icons/pie.svg");
-}
-nav.tools .icon-checklist {
-  background-image: url("/assets/icons/checklist.svg");
-}
-nav.tools .icon-bars {
-  background-image: url("/assets/icons/bars.svg");
-}
-nav.tools .icon-download {
-  background-image: url("/assets/icons/download.svg");
-}
-nav.tools .icon-calendar {
-  background-image: url("/assets/icons/calendar.svg");
-}
-nav.tools .icon-person {
-  background-image: url("/assets/icons/person.svg");
 }
 
 .indicators .item .unit, .indicators .item .period, .indicators .item h3 {
@@ -354,13 +333,6 @@ footer span {
   line-height: 150%;
 }
 
-@media screen and (max-width: 480px) {
-  header {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-}
 .logo a {
   text-decoration: none;
 }
@@ -410,15 +382,15 @@ button:disabled, button.primary:disabled, button.secondary:disabled, button.tert
 }
 button:disabled:hover, button:disabled:focus, button.primary:disabled:hover, button.primary:disabled:focus, button.secondary:disabled:hover, button.secondary:disabled:focus, button.tertiar:disabled:hover, button.tertiar:disabled:focus, input[type=button]:disabled:hover, input[type=button]:disabled:focus, input[type=submit]:disabled:hover, input[type=submit]:disabled:focus {
   cursor: not-allowed;
-  background-color: var(--border-color);
-  color: var(--tertiar);
-  border-color: var(--tertiar);
+  background-color: var(--button-hover-background__disabled);
+  color: var(--button-hover__disabled);
+  border-color: var(--button-hover-background__disabled);
 }
 button:hover, button:focus, button.primary:hover, button.primary:focus, button.secondary:hover, button.secondary:focus, button.tertiar:hover, button.tertiar:focus, input[type=button]:hover, input[type=button]:focus, input[type=submit]:hover, input[type=submit]:focus {
-  background-color: var(--black);
-  color: var(--white);
-  border-color: var(--black);
-  outline: 1px solid var(--black);
+  background-color: var(--button-hover-background);
+  color: var(--button-hover);
+  border-color: var(--button-hover-background);
+  outline: 1px solid var(--button-hover-background);
   text-decoration: underline;
   cursor: pointer;
 }
@@ -481,10 +453,19 @@ figure img {
   --white: hsl(0, 100%, 100%);
   --black: hsl(0,100%,0%);
   --link: hsl(29, 100%, 41%);
+  --link-hover: hsl(0, 100%, 100%);
+  --link-hover-background: hsl(194, 64%, 13%);
+  --button-hover: hsl(0, 100%, 100%);
+  --button-hover-background: hsl(194, 64%, 13%);
+  --button-hover__disabled: hsl(0, 0%, 36%);
+  --button-hover-background__disabled: hsl(29, 30%, 71%);
+  --input-background: hsl(30, 100%, 99%);
+  --input-background-focus: hsl(0, 100%, 100%);
   --text: hsl(0,100%,5%);
   --text-inverted: hsl(0, 100%, 100%);
   --darkest: hsl(194, 64%, 13%);
   --border-color: hsl(29, 30%, 71%);
+  --border-focus:hsl(194, 64%, 13%);
   --table-border-color: hsl(29, 30%, 71%);
   --selection: hsl(45, 100%, 80%);
   --panel-background: hsl(0, 100%, 100%);
@@ -528,7 +509,7 @@ figure img {
   --light: 300;
 }
 
-body, input, button, textarea {
+body, input, select, button, textarea {
   font-family: "Jost", sans-serif;
   font-size: var(--font-size-medium);
   font-weight: normal;
@@ -609,14 +590,16 @@ label {
   font-weight: var(--semibold);
 }
 
-input, textarea {
+input, textarea, select {
   padding: var(--space-small) var(--space-small) var(--space-small);
   border-radius: var(--border-radius);
   border: 1px solid var(--border-color);
+  background-color: var(--input-background);
 }
-input:focus, textarea:focus {
-  border-color: var(--text);
-  outline: 1px solid var(--text);
+input:focus, textarea:focus, select:focus {
+  border-color: var(--border-focus);
+  outline: 1px solid var(--border-focus);
+  background-color: var(--input-background-focus);
 }
 
 .preamble {
@@ -629,7 +612,7 @@ input:focus, textarea:focus {
   color: var(--text-inverted);
 }
 .links-inverted a:hover, .links-inverted a:hover {
-  background-color: var(--text);
+  background-color: var(--link-hover-background);
 }
 
 a {
@@ -656,8 +639,8 @@ a.is-active {
 }
 
 a.is-active, a:hover, a:focus, a > h3.is-active, a > h3:hover, a > h3:focus {
-  color: var(--text-inverted);
-  background-color: var(--darkest);
+  color: var(--link-hover);
+  background-color: var(--link-hover-background);
   text-decoration: none;
 }
 
@@ -674,8 +657,8 @@ a.readmore {
   align-self: start;
 }
 a.readmore:hover, a.readmore:focus {
-  color: var(--text-inverted);
-  background-color: var(--darkest);
+  color: var(--link-hover);
+  background-color: var(--link-hover-background);
 }
 
 ol li, ul li {
@@ -726,7 +709,14 @@ ol, ul {
 .row {
   display: flex;
   flex-direction: row;
+}
+
+.gap {
   gap: var(--space-between);
+}
+
+.gap-small {
+  gap: var(--space-tiny);
 }
 
 @media screen and (max-width: 920px) {
@@ -778,6 +768,10 @@ ol, ul {
     flex-direction: column;
   }
 }
+.space-between {
+  justify-content: space-between;
+}
+
 .spaced {
   justify-content: space-between;
   gap: var(--space-medium);
@@ -798,6 +792,14 @@ ol, ul {
 
 .margin-auto {
   margin: 0 auto;
+}
+
+.margin-top {
+  margin-top: var(--space-top);
+}
+
+.image-height-small {
+  max-height: 48px;
 }
 
 .padded {
@@ -834,7 +836,7 @@ body {
   margin: 0;
 }
 
-header, main, nav.main, article {
+header, main, article, .is-main {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 var(--space-large);
@@ -880,10 +882,6 @@ article header {
   padding: 0;
 }
 
-nav.main {
-  padding: 0 var(--space-medium) var(--space-medium);
-}
-
 article .preamble {
   max-width: 70vw;
 }
@@ -909,6 +907,34 @@ article .content {
   grid-template-columns: 2rem 1fr;
   align-items: center;
   justify-items: start;
+}
+
+.icon-pie {
+  background-image: url("/assets/icons/pie.svg");
+}
+
+.icon-checklist {
+  background-image: url("/assets/icons/checklist.svg");
+}
+
+.icon-bars {
+  background-image: url("/assets/icons/bars.svg");
+}
+
+.icon-download {
+  background-image: url("/assets/icons/download.svg");
+}
+
+.icon-calendar {
+  background-image: url("/assets/icons/calendar.svg");
+}
+
+.icon-person {
+  background-image: url("/assets/icons/person.svg");
+}
+
+.icon-publication {
+  background-image: url("/assets/icons/publication.svg");
 }
 
 /*# sourceMappingURL=style.css.map */

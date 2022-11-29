@@ -103,7 +103,7 @@
         }
 
         &:hover, &:focus {
-            color: var(--text-inverted);
+            color: var(--link-hoover);
 
             img {
                 filter: grayscale(100%);

@@ -10,7 +10,8 @@ It includes a basic server for development purpose, a SASS and component setup.
 - [ ] Add theme template
 - [x] Add template for statistics start page
 - [x] Add template for regular page
-- [ ] Create responsive menus (Mobile)
+- [x] Create responsive menus (Mobile)
+- [ ] Printversion
 - [ ] Make templates fully responsive
 
 ## Setup

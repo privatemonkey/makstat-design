@@ -3,6 +3,33 @@
     src: url("/assets/fonts/Montserrat-VariableFont_wght.ttf");
   }
 
+.color {
+    border-radius: 10rem;
+    width: 5rem;
+    height: 5rem;
+}
+
+ul.colors {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 0;
+}
+
+.colors li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-items: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+    width: 8rem;
+    height: 8rem;
+}
+
 .template main, .template header {
     max-width: 920px;
     margin: 0 auto;

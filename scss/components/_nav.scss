@@ -52,8 +52,6 @@ nav.breadcrumb {
 }
 
 nav.main, nav.language {
-    gap: var(--space-medium);
-    
     a {
         display: inline-block;
         padding: var(--space-small) var(--space-medium);
@@ -73,8 +71,8 @@ nav.main, nav.language {
             color: var(--link);
 
             &:hover, &:focus, &.is-active {
-                color: var(--text-inverted);
-                background-color: var(--darkest);
+                color: var(--link-hover);
+                background-color: var(--link-hover-background);
             }
         }
     }
@@ -104,25 +102,5 @@ nav.tools {
             box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.9);
             margin: 1px 1px;
         }
-    }
-
-    .icon-pie {
-        background-image: url('/assets/icons/pie.svg');     
-    }
-    .icon-checklist {
-        background-image: url('/assets/icons/checklist.svg');
-    }
-    .icon-bars {
-        background-image: url('/assets/icons/bars.svg');
-    }
-    .icon-download {
-        background-image: url('/assets/icons/download.svg');
-    }
-    .icon-calendar {
-        background-image: url('/assets/icons/calendar.svg');
-    }
-
-    .icon-person {
-        background-image: url('/assets/icons/person.svg');
     }
 }

@@ -46,7 +46,7 @@ $font_numbers: 'Jost', sans-serif;
     --light: 300;
 }
 
-body, input, button, textarea {
+body, input, select, button, textarea {
     font-family: $font_sansserif;
     font-size: var(--font-size-medium);
     font-weight: normal;
@@ -137,14 +137,16 @@ label {
     font-weight: var(--semibold);
 }
 
-input, textarea {
+input, textarea, select {
     padding: var(--space-small) var(--space-small) var(--space-small);
     border-radius: var(--border-radius);
     border: 1px solid var(--border-color);
+    background-color: var(--input-background);
 
     &:focus {
-        border-color: var(--text);
-        outline: 1px solid var(--text);
+        border-color: var(--border-focus);
+        outline: 1px solid var(--border-focus);
+        background-color: var(--input-background-focus);
     }
 }
 
@@ -158,7 +160,7 @@ input, textarea {
     color: var(--text-inverted);
 
     &:hover, &:hover {
-        background-color: var(--text);
+        background-color: var(--link-hover-background);
     }
 }
 a{
@@ -186,8 +188,8 @@ a.is-active {
 
 a, a > h3 {
     &.is-active, &:hover, &:focus {
-        color: var(--text-inverted);
-        background-color: var(--darkest);
+        color: var(--link-hover);
+        background-color: var(--link-hover-background);
         text-decoration: none;
     }
 }
@@ -205,8 +207,8 @@ a.readmore {
     align-self: start;
  
     &:hover, &:focus {
-        color: var(--text-inverted);
-        background-color: var(--darkest);
+        color: var(--link-hover);
+        background-color: var(--link-hover-background);
     }
 }
 
