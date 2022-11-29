@@ -6,6 +6,14 @@
 
         <link rel="icon" href="/assets/icons/favicon.png" />
         <link rel="stylesheet" href="/assets/css/style.css" />
+
+        <script>
+            function toggleMenu(e) {
+                let el = document.getElementById('mainmenu');
+                el.classList.toggle('mobile-hidden','');
+                e.preventDefault()
+            }
+        </script>
         <!-- Remove templating from production -->
         <link rel="stylesheet" href="/_system/templating.css" />
         <script src="/_system/templating.js"></script>
@@ -24,7 +32,7 @@
             </header>
             <div data-include="/components/indicators/cards/start.html"></div>
             <div data-include="/components/tools/start.html"></div>
-            <div class="columns-2">
+            <div class="columns-2  margin-top">
                 <div data-include="/components/lists/releases/start.html"></div>
                 <div data-include="/components/lists/news/start.html"></div>
             </div>

@@ -1,10 +1,4 @@
-@mixin icon {
-    background-position: 1.25rem 1rem;
-    background-repeat: no-repeat;
-    background-size: 1.5rem 1.5rem;
-}
-
-nav.pagination {
+.pagination {
     display: flex;
     flex-direction: row;
     gap: var(--space-between);
@@ -17,6 +11,12 @@ nav.pagination {
         background-color: var(--panel-background);
         color: var(--link);
     }
+
+    a.is-active {
+        color: var(--link-selected);
+        background-color: var(--link-selected-background);
+        border-color: var(--link-selected-background);
+    }
 }
 
 article nav.tools {
@@ -26,6 +26,8 @@ article nav.tools {
 nav.breadcrumb { 
     padding-top: 0;
     padding-bottom: 0;
+    margin-top: calc(2 * var(--space-between));
+
     ol {
         display: flex;
         flex-direction: row;
@@ -63,6 +65,7 @@ nav.main, nav.language {
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
+        flex-grow: 2;
 
         a {
             border: 1px solid var(--border-color);
@@ -74,33 +77,13 @@ nav.main, nav.language {
                 color: var(--link-hover);
                 background-color: var(--link-hover-background);
             }
+
+            &.is-active {
+                background-color: var(--link-selected-background);
+                border-color: var(--link-selected-background);
+                color: var(--link-selected);
+            }
         }
     }
     
-}
-
-nav.tools {
-    a.icon {
-        @include icon;
-        display: inline-block;
-        padding: var(--space-small) var(--space-medium);
-        border-radius: var(--border-radius);
-        border: 1px solid var(--border-color);
-        color: var(--text);
-        font-weight: var(--semibold);
-        text-decoration: none; 
-        background-color: var(--text-inverted);
-        box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        padding: 1.25rem 1.5rem 1.25rem 3.5rem;
-        align-self: start;
-
-        &:hover, &:focus {
-            color: var(--text-inverted);
-            border-color: var(--text);
-            border-width: 0;
-            background-color: var(--darkest);
-            box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.9);
-            margin: 1px 1px;
-        }
-    }
 }

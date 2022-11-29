@@ -1,3 +1,38 @@
+@mixin icon {
+    background-position: 1.25rem 1rem;
+    background-repeat: no-repeat;
+    background-size: 1.5rem 1.5rem;
+}
+
+button.icon {
+    @include icon;
+    background-position: 0.75rem 0.75rem;
+    padding-left: 2.5rem;
+}
+a.icon {
+    @include icon;
+    display: inline-block;
+    padding: var(--space-small) var(--space-medium);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    color: var(--text);
+    font-weight: var(--semibold);
+    text-decoration: none; 
+    background-color: var(--text-inverted);
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    padding: 1.25rem 1.5rem 1.25rem 3.5rem;
+    align-self: start;
+
+    &:hover, &:focus {
+        color: var(--text-inverted);
+        border-color: var(--text);
+        border-width: 0;
+        background-color: var(--darkest);
+        box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.9);
+        margin: 1px 1px;
+    }
+}
+
 .icon-pie {
     background-image: url('/assets/icons/pie.svg');     
 }
@@ -20,4 +55,14 @@
 
 .icon-publication {
     background-image: url('/assets/icons/publication.svg');
+}
+
+.icon-menu {
+    background-image: url('/assets/icons/menu.svg');
+}
+
+@media screen and (max-size: 640px) {
+    a.icon {
+        flex-grow: 2;
+    }
 }

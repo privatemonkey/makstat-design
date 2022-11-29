@@ -54,6 +54,9 @@ table {
         text-align: right;
     }
 
+    th {
+        font-weight: var(--bold);
+    }
     th, caption {
         text-align: left;
     }

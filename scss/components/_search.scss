@@ -1,9 +1,16 @@
+@media screen and (max-size: 640px) {
+    .search .row input {
+        max-width: 18ch;
+    }
+}
+
 .search {
     display: flex;
     flex-direction: column;
 
     .row {
         gap: var(--space-tiny);
+        justify-content: start;
     }
 
     label {
@@ -13,5 +20,12 @@
         margin-left: 0.45rem;
         font-size: var(--font-size-small);
         display: none;
+    }
+
+    button {
+        flex-grow: 1;
+    }
+    input {
+        flex-grow: 2;
     }
 }

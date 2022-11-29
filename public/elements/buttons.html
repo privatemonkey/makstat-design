@@ -1,3 +1,45 @@
-<button class="primary">Primary</button>
-<button class="secondary">Secondary</button>
-<button class="tertiary">Tertiary</button>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" href="/assets/icons/favicon.png" />
+        <link rel="stylesheet" href="/assets/css/style.css" />
+        <!-- Remove templating from production -->
+        <link rel="stylesheet" href="/_system/templating.css" />
+        <script src="/_system/templating.js"></script>
+        <!-- End templating-->
+        
+        <title>Buttons</title>
+    </head>
+    <body>
+        <nav class="templating"><button onclick="toggleCode()">Toggle code</button></nav> <main>
+        <main>
+            <h1>Buttons</h1>
+
+            <div class="column-1 text-width">
+                <button class="primary">Primary</button>
+                <button class="secondary">Secondary</button>
+                <button class="tertiary">Tertiar</button>
+                <button>Unstyled</button>
+                <input type="button" value="Input type button" />
+                <input type="submit" value="Input type submit" />
+            </div>
+
+            <h2>State: Disabled</h2>
+
+            <div class="column-1 text-width">
+                <button class="primary" disabled>Primary</button>
+                <button class="secondary" disabled>Secondary</button>
+                <button class="tertiary" disabled>Tertiar</button>
+                <button disabled>Unstyled</button>
+                <input type="button" value="Input type button" disabled />
+                <input type="submit" value="Input type submit" disabled />
+            </div>
+        </main>
+    </body>
+    <script>    
+        includeHTML()
+    </script> 
+</html>

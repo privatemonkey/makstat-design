@@ -14,28 +14,30 @@ button, input[type=button], input[type=submit] {
         background-color: var(--primary);
     }
     &.secondary {
-        background-color: var(--white);
+        background-color: var(--secondary);
         border-color: var(--primary);
         color: var(--primary);
     }
-    &.tertiar {
+    &.tertiary {
         background-color: var(--tertiar);
         border-color: var(--tertiar);
-        color: var(--white);
+        color: var(--text-inverted);
     }
 }
 
 button, button.primary, button.secondary, button.tertiar, input[type=button], input[type=submit] {
     &:disabled {
-        background-color: var(--border-color);
-        color: var(--tertiar);
-        border-color: var(--tertiar);
+        background-color: var(--button-background__disabled);
+        color: var(--button__disabled);
+        border-color: var(--button-background__disabled);
 
         &:hover, &:focus {
             cursor: not-allowed;
+            text-decoration: none;
             background-color: var(--button-hover-background__disabled);
             color: var(--button-hover__disabled);
             border-color: var(--button-hover-background__disabled);
+            outline: none;
         }
     }
 
