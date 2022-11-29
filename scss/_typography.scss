@@ -146,7 +146,7 @@ input, textarea, select {
     &:focus {
         border-color: var(--border-focus);
         outline: 1px solid var(--border-focus);
-        background-color: var(--input-background-focus);
+        background-color: var(--input-background);
     }
 }
 

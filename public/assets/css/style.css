@@ -85,7 +85,8 @@
   text-decoration: underline;
 }
 .list-cards a:hover, .list-cards a:focus {
-  color: var(--link-hoover);
+  color: var(--link-hover);
+  background-color: var(--link-hover-background);
 }
 .list-cards a:hover img, .list-cards a:focus img {
   filter: grayscale(100%);
@@ -599,7 +600,7 @@ input, textarea, select {
 input:focus, textarea:focus, select:focus {
   border-color: var(--border-focus);
   outline: 1px solid var(--border-focus);
-  background-color: var(--input-background-focus);
+  background-color: var(--input-background);
 }
 
 .preamble {

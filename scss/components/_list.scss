@@ -103,7 +103,8 @@
         }
 
         &:hover, &:focus {
-            color: var(--link-hoover);
+            color: var(--link-hover);
+            background-color: var(--link-hover-background);
 
             img {
                 filter: grayscale(100%);
