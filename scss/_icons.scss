@@ -9,8 +9,10 @@ button.icon {
     background-position: 0.75rem 0.75rem;
     padding-left: 2.5rem;
 }
+
 a.icon {
     @include icon;
+
     display: inline-block;
     padding: var(--space-small) var(--space-medium);
     border-radius: var(--border-radius);
@@ -30,6 +32,12 @@ a.icon {
         background-color: var(--darkest);
         box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.9);
         margin: 1px 1px;
+    }
+}
+
+@media screen and (max-width: 640px ) {
+    a.icon {
+        align-self: stretch;
     }
 }
 
@@ -59,10 +67,4 @@ a.icon {
 
 .icon-menu {
     background-image: url('/assets/icons/menu.svg');
-}
-
-@media screen and (max-size: 640px) {
-    a.icon {
-        flex-grow: 2;
-    }
 }

@@ -1,9 +1,3 @@
-@media screen and (max-size: 640px) {
-    .search .row input {
-        max-width: 18ch;
-    }
-}
-
 .search {
     display: flex;
     flex-direction: column;
@@ -25,7 +19,20 @@
     button {
         flex-grow: 1;
     }
+
+    @media screen and (max-width: 640px ) {
+        input {
+            max-width: 32ch;
+        }
+    }
+
+    @media screen and (max-width: 480px ) {
+        input {
+            max-width: 18ch;
+        }
+    }
+
     input {
-        flex-grow: 2;
+        flex-grow: 2;       
     }
 }
