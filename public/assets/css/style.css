@@ -714,6 +714,18 @@ ol, ul {
   --border-radius: 0.25rem;
 }
 
+.gap {
+  gap: var(--space-between);
+}
+
+.gap-small {
+  gap: var(--space-tiny);
+}
+
+.gap-large {
+  gap: 3rem !important;
+}
+
 /* Generic layout classes */
 @media screen and (max-width: 640px) {
   .mobile-hidden {
@@ -736,15 +748,7 @@ ol, ul {
   flex-direction: row;
 }
 
-.gap {
-  gap: var(--space-between);
-}
-
-.gap-small {
-  gap: var(--space-tiny);
-}
-
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 920px) {
   .column-if-mobile {
     flex-direction: column;
     max-width: 100vw;
