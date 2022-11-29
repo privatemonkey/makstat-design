@@ -10,7 +10,7 @@
     "dev": "npm-run-all -p devserver watch:sass",
     "compile:sass": "sass scss/main.scss:public/assets/css/style.css",
     "compress:css": "node-sass public/assets/css/style.css public/assets/css/style.min.css --output-style compressed",
-    "build": "npm-run-all -s compile:sass compress:css"
+    "build": "npm-run-all -s compile:sass"
   },
   "keywords": [],
   "author": "Anders Olsen",
