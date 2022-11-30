@@ -275,6 +275,14 @@ main header.background-image {
   line-height: 100%;
 }
 
+.government-banner {
+  background-color: var(--darkest);
+  color: var(--text-inverted);
+}
+.government-banner p {
+  padding: var(--space-medium) 0;
+}
+
 table {
   border-radius: var(--border-radius);
   border: 1px solid var(--border-color);
@@ -612,6 +620,7 @@ h5 {
   margin: 0;
   max-width: 15ch;
   align-self: center;
+  letter-spacing: 0.05rem;
 }
 
 caption, figcaption {
