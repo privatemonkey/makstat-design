@@ -442,7 +442,7 @@ select {
   padding-right: 2.25rem;
   background-image: url("/assets/icons/chevron-down.svg");
   background-repeat: no-repeat;
-  background-position-x: right 6px;
+  background-position-x: right;
   background-position-y: center;
 }
 
@@ -542,7 +542,6 @@ body, input, select, button, textarea {
   font-size: var(--font-size-medium);
   font-weight: normal;
   font-variant-numeric: lining-nums;
-  letter-spacing: 0.015rem;
 }
 
 table td {
@@ -691,7 +690,7 @@ a:has(h3) {
 }
 
 a.readmore {
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
   color: var(--link);
   display: inline-block;
   font-size: var(--font-size-small);
