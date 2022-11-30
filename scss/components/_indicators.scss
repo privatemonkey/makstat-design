@@ -24,8 +24,12 @@ $font_numbers: 'Jost', sans-serif;
         display: block;
     }
 
-    h3, p, span {
+    p, span {
         margin: 0 0 var(--space-small);
+    }
+
+    h3 {
+        margin: 0;
     }
 
     span:last-of-type {

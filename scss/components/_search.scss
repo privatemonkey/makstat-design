@@ -1,6 +1,7 @@
 .search {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 
     .row {
         gap: var(--space-tiny);

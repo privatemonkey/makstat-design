@@ -204,8 +204,11 @@ nav.main a, nav.language a {
 .indicators span {
   display: block;
 }
-.indicators h3, .indicators p, .indicators span {
+.indicators p, .indicators span {
   margin: 0 0 var(--space-small);
+}
+.indicators h3 {
+  margin: 0;
 }
 .indicators span:last-of-type {
   margin-bottom: 0;
@@ -218,6 +221,7 @@ nav.main a, nav.language a {
 .search {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .search .row {
   gap: var(--space-tiny);
@@ -372,6 +376,10 @@ footer span {
   background-color: transparent;
   color: var(--text);
   text-decoration: none;
+}
+
+body > header {
+  border-bottom: 1px solid var(--border-color);
 }
 
 header.has-background {
@@ -915,6 +923,10 @@ ol, ul {
 
 .margin-top {
   margin-top: var(--space-top);
+}
+
+.margin-top-small {
+  margin-top: var(--space-small) !important;
 }
 
 .margin-top-large {

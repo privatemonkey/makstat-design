@@ -11,6 +11,10 @@
     }
 }
 
+body > header {
+    border-bottom: 1px solid var(--border-color);
+}
+
 header.has-background {
     background-repeat: no-repeat;
     background-size: cover;

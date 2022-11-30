@@ -142,6 +142,9 @@
     margin-top: var(--space-top);
 }
 
+.margin-top-small {
+    margin-top: var(--space-small) !important;
+}
 .margin-top-large {
     margin-top: calc(var(--space-top) * 4);
 }
