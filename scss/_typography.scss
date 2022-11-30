@@ -18,6 +18,19 @@
     src: url('/assets/fonts/Jost-VariableFont_wght.ttf')
 }
 
+@mixin input {
+    padding: var(--space-small) var(--space-small) var(--space-small);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    background-color: var(--input-background);
+
+    &:focus {
+        border-color: var(--border-focus);
+        outline: 1px solid var(--border-focus);
+        background-color: var(--input-background);
+    }
+}
+
 $font_sansserif: 'Jost', sans-serif;
 $font_numbers: 'Jost', sans-serif;
 
@@ -136,17 +149,13 @@ label {
     font-weight: var(--semibold);
 }
 
-input, textarea, select {
-    padding: var(--space-small) var(--space-small) var(--space-small);
-    border-radius: var(--border-radius);
-    border: 1px solid var(--border-color);
-    background-color: var(--input-background);
+input, textarea {
+    @include input;
+}
 
-    &:focus {
-        border-color: var(--border-focus);
-        outline: 1px solid var(--border-focus);
-        background-color: var(--input-background);
-    }
+select {
+    @include input;
+    padding-right: 2.15rem;
 }
 
 .preamble {
@@ -199,7 +208,7 @@ a:has(h3) {
 }
 
 a.readmore {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
     color: var(--link);
     display: inline-block;
     font-size: var(--font-size-small);
@@ -211,7 +220,7 @@ a.readmore {
         background-color: var(--link-hover-background);
     }
 
-    justify-self: top;
+    align-self: end;
 }
 
 ol li, ul li {

@@ -156,6 +156,7 @@ nav.breadcrumb ol a.is-active {
 nav.main a, nav.language a {
   display: inline-block;
   padding: var(--space-small) var(--space-medium);
+  font-size: 1.05rem;
 }
 
 @media screen and (max-width: 480px) {
@@ -434,6 +435,17 @@ textarea {
   min-height: 6rem;
 }
 
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right: 2.25rem;
+  background-image: url("/assets/icons/chevron-down.svg");
+  background-repeat: no-repeat;
+  background-position-x: right 6px;
+  background-position-y: center;
+}
+
 .input-large {
   width: 60ch;
 }
@@ -606,13 +618,26 @@ label {
   font-weight: var(--semibold);
 }
 
-input, textarea, select {
+input, textarea {
   padding: var(--space-small) var(--space-small) var(--space-small);
   border-radius: var(--border-radius);
   border: 1px solid var(--border-color);
   background-color: var(--input-background);
 }
-input:focus, textarea:focus, select:focus {
+input:focus, textarea:focus {
+  border-color: var(--border-focus);
+  outline: 1px solid var(--border-focus);
+  background-color: var(--input-background);
+}
+
+select {
+  padding: var(--space-small) var(--space-small) var(--space-small);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  background-color: var(--input-background);
+  padding-right: 2.15rem;
+}
+select:focus {
   border-color: var(--border-focus);
   outline: 1px solid var(--border-focus);
   background-color: var(--input-background);
@@ -666,13 +691,13 @@ a:has(h3) {
 }
 
 a.readmore {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
   color: var(--link);
   display: inline-block;
   font-size: var(--font-size-small);
   align-self: end;
   padding: var(--space-small);
-  justify-self: top;
+  align-self: end;
 }
 a.readmore:hover, a.readmore:focus {
   color: var(--link-hover);
@@ -740,6 +765,22 @@ ol, ul {
     display: none !important;
   }
 }
+.grow {
+  flex-grow: 2;
+}
+
+.end {
+  align-self: end;
+}
+
+.justify-center {
+  justify-self: center;
+}
+
+.align-center {
+  align-self: center;
+}
+
 .column, .column-1 {
   display: flex;
   flex-direction: column;
@@ -829,6 +870,10 @@ ol, ul {
 
 .margin-top {
   margin-top: var(--space-top);
+}
+
+.margin-right-small {
+  margin-right: var(--space-small);
 }
 
 .image-height-small {

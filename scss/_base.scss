@@ -76,6 +76,19 @@ textarea {
     min-height: 6rem;
 }
 
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-right: 2.25rem;
+    background-image: url("/assets/icons/chevron-down.svg");
+
+    background-repeat: no-repeat;
+    background-position-x: right 6px;
+    background-position-y: center;
+    
+}
+
 .input-large {
     width: 60ch;
 }  

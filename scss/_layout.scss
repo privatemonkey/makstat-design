@@ -35,6 +35,18 @@
     }
 }
 
+.grow {
+    flex-grow: 2;
+}
+.end {
+    align-self: end;
+}
+.justify-center {
+    justify-self: center;
+}
+.align-center {
+    align-self: center;
+}
 .column, .column-1 {
     display: flex;
     flex-direction: column;
@@ -128,6 +140,9 @@
 }
 .margin-top {
     margin-top: var(--space-top);
+}
+.margin-right-small {
+    margin-right: var(--space-small);
 }
 
 .image-height-small {
