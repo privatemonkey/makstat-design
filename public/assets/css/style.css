@@ -244,7 +244,7 @@ nav.main a, nav.language a {
 
 .background-image {
   background-repeat: no-repeat;
-  padding: 1rem 2rem;
+  padding: 3.5rem 2rem;
 }
 
 @media screen and (max-width: 640px) {
@@ -655,6 +655,7 @@ a.is-active {
 }
 
 a.is-active, a:hover, a:focus, a > h3.is-active, a > h3:hover, a > h3:focus {
+  border-radius: var(--border-radius);
   color: var(--link-hover);
   background-color: var(--link-hover-background);
   text-decoration: none;
@@ -665,11 +666,13 @@ a:has(h3) {
 }
 
 a.readmore {
-  margin-bottom: 1.15rem;
+  margin-bottom: 0.5rem;
   color: var(--link);
   display: inline-block;
   font-size: var(--font-size-small);
   align-self: end;
+  padding: var(--space-small);
+  justify-self: top;
 }
 a.readmore:hover, a.readmore:focus {
   color: var(--link-hover);

@@ -187,6 +187,7 @@ a.is-active {
 
 a, a > h3 {
     &.is-active, &:hover, &:focus {
+        border-radius: var(--border-radius);
         color: var(--link-hover);
         background-color: var(--link-hover-background);
         text-decoration: none;
@@ -198,16 +199,19 @@ a:has(h3) {
 }
 
 a.readmore {
-    margin-bottom: 1.15rem;
+    margin-bottom: 0.5rem;
     color: var(--link);
     display: inline-block;
     font-size: var(--font-size-small);
     align-self: end;
+    padding: var(--space-small);
  
     &:hover, &:focus {
         color: var(--link-hover);
         background-color: var(--link-hover-background);
     }
+
+    justify-self: top;
 }
 
 ol li, ul li {
