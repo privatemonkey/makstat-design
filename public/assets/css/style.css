@@ -196,6 +196,7 @@ nav.main a, nav.language a {
 }
 .indicators .item .unit {
   font-size: var(--font-size-medium);
+  font-weight: var(--semibold);
 }
 .indicators .item .period {
   font-size: var(--font-size-medium);
