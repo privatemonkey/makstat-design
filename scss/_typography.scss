@@ -128,6 +128,16 @@ h5 {
     } 
 }
 
+.logo-text {
+    font-weight: bold;
+    font-size: var(--header-h4);
+    color: var(--darkest);
+    text-transform: uppercase;
+    margin: 0;
+    max-width: 15ch;
+    align-self: center;
+}
+
 caption, figcaption {
     font-size: var(--header-h4);
     font-weight: var(--bold);
@@ -165,9 +175,12 @@ select {
 
 .links-inverted a {
     color: var(--text-inverted);
+    text-decoration-color: var(--text-inverted);
 
     &:hover, &:hover {
-        background-color: var(--link-hover-background);
+        background-color: var(--link);
+        text-decoration-color: var(--text-inverted);
+       
     }
 }
 a{
@@ -256,4 +269,7 @@ ol, ul {
     background-color: var(--selection);
     color: var(--text);
     text-decoration: none;
+}
+.highlight-word {
+    color: var(--link);
 }

@@ -247,6 +247,10 @@ nav.main a, nav.language a {
   flex-grow: 2;
 }
 
+.image-height-small {
+  max-height: 64px;
+}
+
 .background-image {
   background-repeat: no-repeat;
   padding: 3.5rem 2rem;
@@ -600,6 +604,16 @@ h5 {
   font-size: var(--header-h6);
 }
 
+.logo-text {
+  font-weight: bold;
+  font-size: var(--header-h4);
+  color: var(--darkest);
+  text-transform: uppercase;
+  margin: 0;
+  max-width: 15ch;
+  align-self: center;
+}
+
 caption, figcaption {
   font-size: var(--header-h4);
   font-weight: var(--bold);
@@ -654,9 +668,11 @@ select:focus {
 
 .links-inverted a {
   color: var(--text-inverted);
+  text-decoration-color: var(--text-inverted);
 }
 .links-inverted a:hover, .links-inverted a:hover {
-  background-color: var(--link-hover-background);
+  background-color: var(--link);
+  text-decoration-color: var(--text-inverted);
 }
 
 a {
@@ -740,6 +756,10 @@ ol, ul {
   background-color: var(--selection);
   color: var(--text);
   text-decoration: none;
+}
+
+.highlight-word {
+  color: var(--link);
 }
 
 :root {
@@ -886,10 +906,6 @@ ol, ul {
 
 .margin-right-small {
   margin-right: var(--space-small);
-}
-
-.image-height-small {
-  max-height: 48px;
 }
 
 .padded {
