@@ -194,6 +194,11 @@ a.is-active {
 }
 
 a, a > h3 {
+    text-decoration-thickness: from-font;
+    text-underline-offset: 4px;
+    text-decoration-skip-ink: all;
+    text-decoration-color: var(--link);
+  
     &.is-active, &:hover, &:focus {
         border-radius: var(--border-radius);
         color: var(--link-hover);
@@ -202,8 +207,11 @@ a, a > h3 {
     }
 }
 
-a:has(h3) {
-    text-decoration: none;
+article a:has(h3) {
+  text-decoration-thickness: from-font;
+  text-underline-offset: 2px;
+  text-decoration-skip-ink: all;
+  text-decoration-color: var(--link);
 }
 
 a.readmore {

@@ -83,6 +83,10 @@
 }
 .list-cards a h3 {
   text-decoration: underline;
+  text-decoration-thickness: from-font;
+  text-underline-offset: 2px;
+  text-decoration-skip-ink: all;
+  text-decoration-color: var(--link);
 }
 .list-cards a:hover, .list-cards a:focus {
   color: var(--link-hover);
@@ -678,6 +682,12 @@ a.is-active {
   font-weight: 500;
 }
 
+a, a > h3 {
+  text-decoration-thickness: from-font;
+  text-underline-offset: 4px;
+  text-decoration-skip-ink: all;
+  text-decoration-color: var(--link);
+}
 a.is-active, a:hover, a:focus, a > h3.is-active, a > h3:hover, a > h3:focus {
   border-radius: var(--border-radius);
   color: var(--link-hover);
@@ -685,8 +695,11 @@ a.is-active, a:hover, a:focus, a > h3.is-active, a > h3:hover, a > h3:focus {
   text-decoration: none;
 }
 
-a:has(h3) {
-  text-decoration: none;
+article a:has(h3) {
+  text-decoration-thickness: from-font;
+  text-underline-offset: 2px;
+  text-decoration-skip-ink: all;
+  text-decoration-color: var(--link);
 }
 
 a.readmore {
