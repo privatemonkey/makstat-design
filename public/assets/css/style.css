@@ -917,6 +917,10 @@ ol, ul {
   margin-top: var(--space-top);
 }
 
+.margin-top-large {
+  margin-top: calc(var(--space-top) * 4);
+}
+
 .margin-right-small {
   margin-right: var(--space-small);
 }
