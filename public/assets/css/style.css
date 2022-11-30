@@ -283,6 +283,9 @@ main header.background-image {
 .government-banner p {
   padding: var(--space-medium) 0;
 }
+.government-banner img {
+  padding: var(--space-small) 0 var(--space-tiny);
+}
 
 table {
   border-radius: var(--border-radius);
